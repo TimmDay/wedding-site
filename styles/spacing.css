@@ -1,0 +1,26 @@
+:root {
+    --space-max-content: 70rem;
+    --space-unit: calc(var(--font-body-lineheight) * 1rem);
+    --gap: var(--space-unit);
+
+    --space-1: calc(0.25 * var(--space-unit));
+    --space-2: calc(0.5 * var(--space-unit));
+    --space-3: calc(0.75 * var(--space-unit));
+    --space-4: var(--space-unit);
+    --space-5: calc(1.25 * var(--space-unit));
+    --space-6: calc(1.5 * var(--space-unit));
+    --space-8: calc(2 * var(--space-unit));
+    --space-12: calc(3 * var(--space-unit));
+    --space-16: calc(4 * var(--space-unit));
+    --space-20: calc(5 * var(--space-unit));
+    --space-40: calc(10 * var(--space-unit));
+
+
+    /* breakpoints */
+    /* *** these will NOT work in media-queries until CSS proposal 'environment variables' is official *** */
+    /* keep these here as reference. Update in ~12 months */
+    --bp-mobile: 35rem; /* portrait phones */ /* mobile-first design, so shouldn't need bp-mobile often*/
+    --bp-tablet: 48rem; /*768px;*/
+    --bp-laptop: 1000px; /* most ~1280 */
+    --bp-big-screen: 1300px;
+}

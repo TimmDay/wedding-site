@@ -1,0 +1,61 @@
+LOOP BACK
+[] Karen and Tim fancy text home logo
+[] secure googmaps api key env etc
+[] style map markers
+[] style map itself to alin with site color theme
+[] get location list, map centers when certain events selected
+[] marker for selected event changes color
+[] ? hover tool tip of map markers
+[] our story page
+  - write captions and collect photos for SwipeShow
+[] realign nav breakpoint to reflect width of headings for mobile
+[] change IconMobileNavToggle to relevant
+[] FOOTER copyright in footer
+[] SkipTOContent
+[] Carousel styles for mobile / bigger
+[] Carousel bullets -> currently selected is highlighted
+[] home page - with an intro note, hero photo and styled box-links to other pages
+[] get github project spun up and connected
+[] get a domain name
+[] get hosted on amplify
+[] smooth (horiz dist) of Carousel slide animation
+[] set prettier auto format settings to 2 lines after import block
+
+
+
+PROCESS
+yarn add styled-components && yarn add -D @types/styled-components
+yarn add nprogress && yarn add -D @types/nprogress
+
+
+DESIGN
+our story. Tell your love story so guests can get to know you better.
+  - Photo gallery. top 20 photos of us. (linkto upload your photos)
+
+Locations (and times). address to your venues, directions
+  - our notable spots. photo ops, good coffee
+  - Schedule. detailed breakdon of schedule
+
+Registry. 
+
+Guestbook - leave a note, upload a photo
+
+RSVP.
+
+
+FAQ - parking, dietary restrictions, attire, how to say jewish prayer
+
+FOOTER - zoom link, times/locations
+
+
+
+--- DONEZO ---
+[x] color scheme
+[] IconLOGO: change it to relevant -> heart that glimmers, squirrel that shouts? -- removed it
+[x] color scheme
+[x] gallery -> photos
+    [x] grid or carosel?
+[x] site fonts - headings, body, fancy?. spacing
+[x] time zones -> show times in users default tz
+[x] box shadow on nav
+[x] FOOTER clean up: change links / categories -> location addresses and times?
