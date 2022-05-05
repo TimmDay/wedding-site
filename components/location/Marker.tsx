@@ -1,19 +1,32 @@
-import { useEffect, useState } from 'react';
+import { Dispatch, SetStateAction, useEffect, useState } from 'react';
+import { svgMarker, svgMarkerPOI } from './custom-markers';
 
 
+type MarkerPropsType = google.maps.MarkerOptions & {
+    markerIndex: number,
+    setFocusIndex: Dispatch<SetStateAction<number>>
+}
 
-const Marker = (options: google.maps.MarkerOptions) => {
+const Marker = (options : MarkerPropsType) => {
+    const { title, position, icon, markerIndex, setFocusIndex } = options;
     const [marker, setMarker] = useState<google.maps.Marker>();
 
     useEffect(() => {
+        if (!marker) {
+            setMarker(new google.maps.Marker());
+        }
 
-        console.log('marker rendering...');
+        if (marker) {
+            marker.addListener("click", () => {
+                setFocusIndex(markerIndex);
+            });
+        }
 
-        if (!marker) setMarker(new google.maps.Marker());
-
-        // remove marker from map on unmount
         return () => {
-            if (marker) marker.setMap(null);
+            // remove marker from map on unmount
+            if (marker) {
+                marker.setMap(null);
+            }
         };
     }, [marker]);
 

@@ -5,6 +5,7 @@ body, body[data-theme="light"] {
     --color-contrast-offset: #444343;
     --color-secondary: #8A7429;
     --color-accent-1: #8A7429;
+    --color-accent-2: #BBA351;
 
     --box-shadow: 1px 5px 10px hsl(0deg 0% 0% / 0.07);
 }
@@ -16,6 +17,7 @@ body[data-theme="dark"] {
     --color-contrast-offset: #F5F5F5;
     --color-secondary: #BBA351;
     --color-accent-1: #BBA351;
+    --color-accent-2: #8A7429;
 
     --box-shadow: 0px 5px 10px hsl(0deg 0% 100% / 0.06);
 }

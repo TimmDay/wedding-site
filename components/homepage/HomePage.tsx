@@ -1,36 +1,40 @@
 import styled from 'styled-components';
+import Image from 'next/image';
+
 
 const HomePage = () => {
-  return (
-    <>
-      <StyledMain id='main wrapper'>
-        <div className='home max-content'>
-          <h1>Wedding Details</h1>
+    return (
+            <StyledMain id="main wrapper">
+                <div className="max-content">
+                    <h1>Wedding Details</h1>
+                    <p>We are Eloping!</p>
+                    <p>Sunday 19 June 2022</p>
+                </div>
 
-          <p>We are Eloping!</p>
-          <p>Sunday 19 June 2022</p>
-          <ul>
-            <li>{'11:15 - 11:30 AEST Wedding Ceremony TODO: exact address'}</li>
-            <li>{'11:30 - 12:45 AEST Photo shoout at Treasury Gardens, Albert Park Lake and St Kilda Pier'}</li>
-            <li>{'13:00 - 15:00 AEST Picnic in Catani Park (ALL INVITED)'}</li>
-            <li>{'15:30 - 18:30 AEST Luna Park (ALL INVITED)'}</li>
-            <li>{"17:00 Family Dinner @ Donovan's, St Kilda Foreshore"}</li>
-          </ul>
-        </div>
-      </StyledMain>
-    </>
-  );
+                <div className="full-bleed">
+                    <Image
+                        src={'/images/20181206_tub-ls.jpeg'}
+                        alt={'banner picture of Karen and Tim'}
+                        width={1200}
+                        height={700}
+                        loading="lazy"
+                        layout={'responsive'}
+                    />
+                </div>
+
+                <div className="max-content">
+                    <p>We would like to thank all the lovely people out there whom we love</p>
+                    <p>Given the logistical details of covid, continents, immigration, air travel and our previously cancelled wedding plans
+                        - we are just doing it!</p>
+                    <p>It will be a small wedding, in a government office, with limited numbers.</p>
+                    <p>Please don't take your lack of invite as an insult</p>
+                </div>
+            </StyledMain>
+    );
 };
 
 const StyledMain = styled.main`
   .home {
-    display: grid;
-    gap: var(--space-4);
-    padding: var(--space-4);
-  }
-
-  .recent-posts {
-    background: red;
   }
 
   // bigger than mobile

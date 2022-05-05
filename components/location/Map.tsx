@@ -1,6 +1,4 @@
 import styled from 'styled-components';
-import { isLatLngLiteral } from '@googlemaps/typescript-guards';
-import { Wrapper, Status } from '@googlemaps/react-wrapper';
 import { useEffect, useRef } from 'react';
 import React from 'react';
 import { nightModeStyles } from './locationData';
@@ -11,11 +9,9 @@ interface MapProps extends google.maps.MapOptions {
     onIdle?: (map: google.maps.Map) => void;
     center?: google.maps.LatLngLiteral,
     zoom?: number,
-    style: { [key: string]: string },
+    style?: { [key: string]: string },
     children: any //todo:
 }
-
-
 
 const Map = ({ center, zoom, children, onClick, onIdle }: MapProps) => {
     const ref = useRef<any>();
@@ -47,6 +43,7 @@ const Map = ({ center, zoom, children, onClick, onIdle }: MapProps) => {
             {React.Children.map(children, (child) => {
                 if (React.isValidElement(child)) {
                     // set the map prop on the child component
+                    // @ts-ignore
                     return React.cloneElement(child, { map });
                 }
             })}
@@ -54,18 +51,12 @@ const Map = ({ center, zoom, children, onClick, onIdle }: MapProps) => {
     );
 };
 
-//#map gets an auto position: rel and overflow: hidden
 const StyledMap = styled.div`
-  color: red;
-  //position: relative;
-  //overflow: visible;
-  
   #map {
     overflow: visible;
     width: 380px;
-    height: 550px;
-    
-    
+    height: 645px;
+    border-radius: 8px;
   }
 `;
 

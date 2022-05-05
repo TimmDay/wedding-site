@@ -1,37 +1,36 @@
 import styled from 'styled-components';
-import React, { useEffect, useState } from 'react';
-import { Wrapper, Status } from '@googlemaps/react-wrapper';
-import { useRouter } from 'next/router';
-import ReactSimpleMap from '../../components/location/ReactSimpleMap';
+import React, { useState } from 'react';
 import MapGoog from '../../components/location/MapGoog';
+import LocationList from '../../components/location/LocationList';
 
 
 const LocationPage = () => {
-    // const router = useRouter();
-
-    // const loadLocationHandler = () => {
-    //   //interact with API...
-    //   router.push('/'); //example: programatic routing
-    // };
+    const [focusIndex, setFocusIndex] = useState(0);
 
     return (
         <StyledLocationPage className="wrapper">
             <div className="max-content">
-                <h1>{'location'}</h1>
-                {/*<button onClick={loadLocationHandler}>Button</button>*/}
-                {/*<ReactSimpleMap />*/}
-                <MapGoog />
+                <MapGoog
+                    focusIndex={focusIndex}
+                    setFocusIndex={setFocusIndex}
+                />
+                <LocationList
+                    focusIndex={focusIndex}
+                    setFocusIndex={setFocusIndex}
+                />
             </div>
         </StyledLocationPage>
     );
 };
 
 const StyledLocationPage = styled.main`
-  h1 {
-    font-family: var(--font-emphasis);
-    text-align: center;
-    font-size: 5rem;
+  & > div {
+    display: grid;
+    gap: var(--space-1);
+    grid-template-columns: 1fr 1fr;
   }
+
+  //todo: mobile has 1 col, bigger has 2
 `;
 
 export default LocationPage;

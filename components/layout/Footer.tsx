@@ -1,53 +1,16 @@
 import styled from 'styled-components';
 import { useState, useEffect } from 'react';
+import { TIMINGS } from '../location/locationData';
+import { convertToUserTZ, TimingsType } from '../../utils/tz-conversion-utils';
 
 
-const { zonedTimeToUtc, utcToZonedTime, format } = require('date-fns-tz');
-
-type TimingsType = {
-    ceremonyStart: string,
-    ceremonyEnd: string,
-    photosStart: string,
-    photosEnd: string,
-    picnicStart: string,
-    picnicEnd: string,
-    lunaStart: string,
-    lunaEnd: string,
-    dinnerStart: string
-}
 
 const Footer = () => {
-    const [timings, setTimings] = useState<TimingsType>({
-        ceremonyStart: '2022-06-19 11:15',
-        ceremonyEnd: '2022-06-19 11:45',
-        photosStart: '2022-06-19 12:00',
-        photosEnd: '2022-06-19 13:30',
-        picnicStart: '2022-06-19 13:30',
-        picnicEnd: '2022-06-19 14:30',
-        lunaStart: '2022-06-19 14:30',
-        lunaEnd: '2022-06-19 18:00',
-        dinnerStart: '2022-06-19 18:30',
-    });
+    const [timings, setTimings] = useState<TimingsType>({ ...TIMINGS });
 
     useEffect(() => {
-        const tz = Intl.DateTimeFormat().resolvedOptions().timeZone ?? 'Australia/Melbourne';
+        const newTimings = convertToUserTZ(timings);
         // @ts-ignore
-        const newTimings: TimingsType = Object.keys(timings).reduce(
-            (acc, key) => {
-                // @ts-ignore
-                const localDateTime = utcToZonedTime(zonedTimeToUtc(timings[key], 'Australia/Melbourne'), tz);
-                const formatString: string = key.includes('End') ? 'h:mm bbb (z)' : 'h:mm bbb';
-
-                const resultTimeString = format(
-                    localDateTime,
-                    formatString,
-                    { timeZone: tz }
-                );
-                // @ts-ignore
-                acc[key] = resultTimeString;
-                return acc;
-            }, {}
-        );
         setTimings(newTimings);
     }, []);
 
@@ -67,44 +30,36 @@ const Footer = () => {
 
                     <div>zoom ceremony</div>
                     <div className="align-left">
-                        <p>https:// ... </p>
+                        <p>{'https:// ... '}</p>
                     </div>
                     <p>{`${timings.ceremonyStart} - ${timings.ceremonyEnd}`}</p>
 
                     <div>ceremony</div>
                     <div className="align-left">
-                        <p>Margaret Craig Room</p>
-                        <p>Old Treasury Building</p>
+                        <p>Margaret Craig Room, Old Treasury Building</p>
                         <p>20 Spring St, East Melbourne 3000</p>
-                        <p>VIC Australia</p>
                     </div>
                     <p>{`${timings.ceremonyStart} - ${timings.ceremonyEnd}`}</p>
 
-
-                    <p>photos</p>
+                    <p>photo spots</p>
                     <div className="align-left">
-                        <p>Treasury Gardens</p>
-                        <p>Albert Park Lake</p>
-                        <p>St Kilda pier</p>
+                        <p>Treasury Gardens, Albert Park Lake, Catani Gardens, St Kilda pier</p>
                     </div>
                     <p>{`${timings.photosStart} - ${timings.photosEnd}`}</p>
 
-
-                    <p>picnic lunch</p>
+                    <p>High Tea and Art</p>
                     <div className="align-left">
-                        <p>South Beach Reserve</p>
-                        <p>26 Jacka Blvd, St Kilda 3182</p>
+                        <p>National Gallery of Victoria</p>
+                        <p>180 St Kilda Rd Melbourne 3006</p>
                     </div>
-                    <p>{`${timings.picnicStart} - ${timings.picnicEnd}`}</p>
+                    <p>{`${timings.ngvStart} - ${timings.ngvEnd}`}</p>
 
-
-                    <p>Luna Park</p>
-                    <div className="align-left">
-                        <p>South Beach Reserve</p>
-                        <p>18 Lower Esplanade St Kilda 3182</p>
-                    </div>
-                    <p>{`${timings.lunaStart} - ${timings.lunaEnd}`}</p>
-
+                    {/*<p>Luna Park</p>*/}
+                    {/*<div className="align-left">*/}
+                    {/*    <p>South Beach Reserve</p>*/}
+                    {/*    <p>18 Lower Esplanade St Kilda 3182</p>*/}
+                    {/*</div>*/}
+                    {/*<p>{`${timings.lunaStart} - ${timings.lunaEnd}`}</p>*/}
 
                     <p>Dinner</p>
                     <div className="align-left">
@@ -112,8 +67,6 @@ const Footer = () => {
                         <p>40 Jacka Blvd, St Kilda 3182</p>
                     </div>
                     <p>{`${timings.dinnerStart} - late`}</p>
-
-
                 </div>
 
                 {/*<div className="copyright">*/
