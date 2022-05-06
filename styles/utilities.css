@@ -6,7 +6,6 @@
 .wrapper > * {
     grid-column: 2;
 }
-
 .max-content {
     max-width: var(--space-max-content);
     grid-column: 1 / 4;

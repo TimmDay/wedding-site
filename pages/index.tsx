@@ -6,7 +6,7 @@ const Home: NextPage = () => {
   return (
     <>
         <Head>
-            <title>Peckers | A Birding Blog</title>
+            <title>Tim ♥ Karen</title>
             <meta
                 name="description"
                 content="homepage for Karen and Tim's wedding site"

@@ -3,7 +3,7 @@ import React, { Dispatch, SetStateAction, useEffect, useState } from 'react';
 import { Wrapper } from '@googlemaps/react-wrapper';
 import Map from './Map';
 import Marker from './Marker';
-import { locationData } from './locationData';
+import { locationData } from '../../data/locationData';
 import MapLoadingMsg from './MapLoadingMsg';
 import { svgMarker, svgMarkerPOI } from './custom-markers';
 

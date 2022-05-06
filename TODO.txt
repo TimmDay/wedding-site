@@ -1,11 +1,15 @@
 LOOP BACK
 
+[] location page styles for mobile
+[] clicking marker or event card rearranges it to display at top of list
+[] how to Carousel portrait photos? want them centered with black either side... or pass Slides a prop and do different styles
+[] style carousel caption
+[] home page
 [] our story page
   - write captions and collect photos for SwipeShow
 [] realign nav breakpoint to reflect width of headings for mobile
 [] change IconMobileNavToggle to relevant
 [] Carousel styles for mobile / bigger
-[] Carousel bullets -> currently selected is highlighted
 [] home page - with an intro note, hero photo and styled box-links to other pages
 [] get a domain name
 [] secure googmaps api key env etc
@@ -16,6 +20,8 @@ LOOP BACK
 [] faq notes on event cards - ie where is parking, nearest bathroom, etc
 [] go on a photo walk next time it is sunny to get some good panorama shots for banners
 [] full app audit for mobile styles
+[] check all the details/times/addresses etc for accuracy
+[] faq page - menu at donovans. why chose these photo locations
 
 
 IF FINISH EARLY
@@ -23,6 +29,7 @@ IF FINISH EARLY
 [] style maps tool tip
 [] map centers on marker when certain events selected
 [] selected marker goes to front of any other markers
+[] when marker selected, location list scrolls to bring that LocationCard in view
 [] figma custom svg icons for map markers. marker with love heart etc
 [] map loading icon (and general loading) is a love heart pulsing
 [] Say Hi page
@@ -48,9 +55,9 @@ Details (Locations and times). address to your venues, directions
   - our notable spots. photo ops, good coffee
   - Schedule. detailed breakdon of schedule
 
-Registry. 
-
 Guestbook - leave a note, upload a photo
+
+Registry.
 
 RSVP.
 
@@ -62,7 +69,6 @@ FOOTER - zoom link, times/locations
 
 
 --- DONEZO ---
-[x] color scheme
 [x] color scheme
 [x] gallery -> photos
     [x] grid or carosel?
@@ -79,4 +85,5 @@ FOOTER - zoom link, times/locations
 [x] ? hover tool tip of map markers
 [x] Karen and Tim fancy text home logo
 [x] get github project spun up and connected
-
+[x] Carousel bullets -> currently selected is highlighted
+[x] Carousel next arrows are fixed position somewhere

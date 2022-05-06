@@ -43,7 +43,6 @@ const LocationCard = ({ focusIndex, setFocusIndex, index, eventTitle, location, 
 };
 
 const StyledLocationCard = styled.div.attrs((props: {selected: boolean}) => props)`
-
   background: var(--color-primary-offset);
   border-radius: 8px;
   padding: var(--space-1) var(--space-2);
@@ -55,12 +54,10 @@ const StyledLocationCard = styled.div.attrs((props: {selected: boolean}) => prop
   h3 {
     font-family: var(--font-emphasis);
   }
-
   p {
     padding: 0;
     margin: 0;
   }
-
   .time-block {
     position: absolute;
     top: 0;

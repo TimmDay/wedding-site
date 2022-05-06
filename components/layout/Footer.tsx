@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { useState, useEffect } from 'react';
-import { TIMINGS } from '../location/locationData';
+import { TIMINGS } from '../../data/locationData';
 import { convertToUserTZ, TimingsType } from '../../utils/tz-conversion-utils';
 
 

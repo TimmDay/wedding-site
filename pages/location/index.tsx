@@ -27,10 +27,15 @@ const StyledLocationPage = styled.main`
   & > div {
     display: grid;
     gap: var(--space-1);
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 
-  //todo: mobile has 1 col, bigger has 2
+  //bigger than mobile / when event cards dont get squashed
+  @media (min-width: 55rem) {
+    & > div {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
 `;
 
 export default LocationPage;

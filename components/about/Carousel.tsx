@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { useEffect } from 'react';
 import Glide, { Options } from '@glidejs/glide';
 import GlideSlide from './GlideSlide';
-import { carouselData } from './carouselData';
+import { carouselData } from '../../data/carouselData';
 
 
 const sliderConfiguration: Options = {
@@ -46,23 +46,31 @@ const Carousel = () => {
                         <Bullet key={index} index={index}/>
                     ))}
                 </div>
+
                 {/* ❰ ❮ ❯ ❱*/}
                 <div className="glide__arrows" data-glide-el="controls">
                     <button className="glide__arrow glide__arrow--left" data-glide-dir="<">❮</button>
                     <button className="glide__arrow glide__arrow--right" data-glide-dir=">">❯</button>
                 </div>
+
             </div>
         </StyledCarousel>
     );
 };
 
 const StyledCarousel = styled.div`
+  .glide__arrows {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+  }
   .glide__arrow--left {
     position: absolute;
     display: block;
-    bottom: 40%;
-    left: 28.9%;
-    font-size: 80px;
+    bottom: -12px;
+    left: calc(50% - 348px);
+    font-size: 25px;
     color: var(--color-grey-100);
     border: none;
     background: none;
@@ -70,26 +78,33 @@ const StyledCarousel = styled.div`
   .glide__arrow--right {
     position: absolute;
     display: block;
-    bottom: 40%;
-    right: 28.9%;
-    font-size: 80px;
+    bottom: -12px;
+    right: calc(50% - 348px); //calc(-45px - var(--space-2));
+    font-size: 25px;
     color: var(--color-grey-100);
     border: none;
     background: none;
   }
-  
   .glide__bullets {
-    text-align: center;
-    button {
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      background: var(--color-grey-100);
-      border: none;
-      padding: 0;
-      margin: 0 calc(var(--space-1)/2);
-      margin-top: var(--space-1);
-    }
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: var(--space-2);
+  }
+  .glide__bullet {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--color-grey-100);
+    border: none;
+    padding: 0;
+    margin: 0 calc(var(--space-1)/2);
+    transition: transform 0.4s ease-out, background-color 0.3s ease-out;
+  }
+  .glide__bullet--active {
+    background-color: var(--color-grey-300);
+    transform: scale(1.2);
   }
 `;
 

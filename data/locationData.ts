@@ -92,7 +92,7 @@ export const locationData = [
         primaryLoc: false
     },
     {
-        eventTitle: 'Photo Op 3',
+        eventTitle: 'Photo Op 4',
         location: 'St Kilda Pier',
         address: '14 Jacka Blvd, St Kilda 3182',
         lat: -37.8637,

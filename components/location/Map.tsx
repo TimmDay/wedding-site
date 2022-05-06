@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { useEffect, useRef } from 'react';
 import React from 'react';
-import { nightModeStyles } from './locationData';
+import { nightModeStyles } from '../../data/locationData';
 
 
 interface MapProps extends google.maps.MapOptions {

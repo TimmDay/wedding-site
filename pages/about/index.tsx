@@ -20,7 +20,7 @@ const About = () => {
                 <Carousel />
             </div>
 
-            <p  className="max-content">
+            <p className="max-content">
                 Karen wowed Tim by speaking Spanish and playing Mozart on piano.
                 Tim wowed Karen by speaking Australian, and having a coherant tinder profile.
                 Date 2 was The Imitation Game
