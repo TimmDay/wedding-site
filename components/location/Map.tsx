@@ -25,7 +25,7 @@ const Map = ({ center, zoom, children, onClick, onIdle }: MapProps) => {
                 styles: overrideMapStyles
             }));
         }
-    }, [ref, map]);
+    }, [ref, map, center, zoom]);
 
     useEffect(() => {
         if (map) {

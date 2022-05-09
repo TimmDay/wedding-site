@@ -36,21 +36,21 @@ const Footer = () => {
 
                     <div>ceremony</div>
                     <div className="align-left">
-                        <p>Margaret Craig Room, Old Treasury Building</p>
-                        <p>20 Spring St, East Melbourne 3000</p>
+                        <p>{"Margaret Craig Room, Old Treasury Building"}</p>
+                        <p>{"20 Spring St, East Melbourne 3000"}</p>
                     </div>
                     <p>{`${timings.ceremonyStart} - ${timings.ceremonyEnd}`}</p>
 
                     <p>photo spots</p>
                     <div className="align-left">
-                        <p>Treasury Gardens, Albert Park Lake, Catani Gardens, St Kilda pier</p>
+                        <p>{"Treasury Gardens, Albert Park Lake, Catani Gardens, St Kilda pier"}</p>
                     </div>
                     <p>{`${timings.photosStart} - ${timings.photosEnd}`}</p>
 
                     <p>High Tea and Art</p>
                     <div className="align-left">
-                        <p>National Gallery of Victoria</p>
-                        <p>180 St Kilda Rd Melbourne 3006</p>
+                        <p>{"National Gallery of Victoria"}</p>
+                        <p>{"180 St Kilda Rd Melbourne 3006"}</p>
                     </div>
                     <p>{`${timings.ngvStart} - ${timings.ngvEnd}`}</p>
 
@@ -63,8 +63,8 @@ const Footer = () => {
 
                     <p>Dinner</p>
                     <div className="align-left">
-                        <p>Donovans</p>
-                        <p>40 Jacka Blvd, St Kilda 3182</p>
+                        <p>{"Donovans"}</p>
+                        <p>{"40 Jacka Blvd, St Kilda 3182"}</p>
                     </div>
                     <p>{`${timings.dinnerStart} - late`}</p>
                 </div>

@@ -7,34 +7,38 @@ const HomePage = () => {
     return (
         <StyledMain id="main wrapper">
             <div className="max-content">
-                <h1>We are Eloping!</h1>
+                <h1>{'We are Eloping!'}</h1>
                 <p className="subheading">
-                    Sunday 19 June 2022 (11:15AM AEST)
+                    {'Sunday 19 June 2022 (11:15AM AEST)'}
                 </p>
 
                 <Countdown/>
 
-                <p>
-                    {`Ceremony Zoom Link: ${"tbc"}`}
-                </p>
-
-
+                <p>{`Ceremony Zoom Link: ${'tbc'}`}</p>
 
                 <p>
-                    We've been planning this for a while...
-                    We would have loved for ALL of our loved ones to be in one place, celebrating as a big crowd in a giant hall.
-                    But more than that, we want to be married already!
-
-                    This will be a small ceremony with a handful of family members and a government celebrant.
-                    Followed by a dinner with some immediate family. Please don't be offended if you weren't invited, pretty much nobody was.
-
-                    But we hope to be celebrating with each of you at some point!
-
-                    We are planning:
-                    - to have the Jewish portion of our ceremony in the USA in the future. We have postponed the signing of the Ketoubah for
-                    this.
-                    - to catch up with friends at some point in each of the cities we have called home for hugs, pubs and wine.
+                    {'We\'ve been planning this for a while...'}
                 </p>
+                <p>
+                    {'We would have loved for ALL of our loved ones to be in one place, celebrating as a big crowd in a giant hall.\n'}
+                </p>
+                <p>
+                    {'But more than that, we want to be married already!'}
+                </p>
+                <p>
+                    {'This will be a small ceremony with a handful of family members and a government celebrant.\n' +
+                        'Followed by a dinner with some immediate family. Please don\'t be offended if you weren\'t invited, pretty much nobody was.'}
+                </p>
+                <p>
+                    {'But we hope to be celebrating with each of you at some point!'}
+                </p>
+                <p>
+                    {'Future dreams include:'}
+                </p>
+                <ul>
+                    <li>{'to have the Jewish portion of our ceremony in the USA in the future. We have postponed the signing of the Ketoubah for this.'}</li>
+                    <li>{'to catch up with friends at some point in each of the cities we have called home for hugs, pubs and wine.'}</li>
+                </ul>
             </div>
 
             <div className="full-bleed">
@@ -67,7 +71,7 @@ const StyledMain = styled.main`
   text-align: center;
 
   h1 {
-    font-family: var(--font-emphasis);
+    font -family: var(--font-emphasis);
     font-size: var(--font-s);
     font-size: var(--xtra-big-ass-heading);
     line-height: 1.15;

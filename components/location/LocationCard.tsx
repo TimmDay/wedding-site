@@ -19,7 +19,7 @@ const LocationCard = ({ focusIndex, setFocusIndex, index, eventTitle, location, 
 
     useEffect(() => {
         setSelected(focusIndex == index);
-    }, [focusIndex]);
+    }, [focusIndex, index]);
 
     return (
         <StyledLocationCard

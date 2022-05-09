@@ -27,7 +27,7 @@ const Marker = (options : MarkerPropsType) => {
                 marker.setMap(null);
             }
         };
-    }, [marker]);
+    }, [marker, markerIndex, setFocusIndex]);
 
     useEffect(() => {
         if (marker) marker.setOptions(options);
