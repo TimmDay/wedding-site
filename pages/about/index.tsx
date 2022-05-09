@@ -10,10 +10,12 @@ const About = () => {
             <div className="max-content">
                 <h1>{'Our Story'}</h1>
                 <p>
-                    In 2015, on the day after Valentine's Day, during Boston's heaviest snowfall on record, Karen and Tim both opened the Tinder app.
-                    With most of the city closed, Karen was cooped up with an insufferable friend of her housemate, while Tim was non-stop partying with half of Bostons couchsurfing community.
-                    They both needed to get outside. So they swiped right.
+                    {"In 2015, on the day after Valentine's Day, during Boston's heaviest snowfall on record, Karen and Tim both opened the Tinder app."}
                 </p>
+                <p>
+                    {"With most of the city closed, Karen was cooped up with an insufferable friend of her housemate, while Tim was non-stop partying with half of Bostons couchsurfing community."}
+                </p>
+                <p>{"They both needed to get outside. So they swiped right."}</p>
             </div>
 
             <div className="full-bleed">
