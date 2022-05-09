@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { useEffect, useRef } from 'react';
 import React from 'react';
-import { nightModeStyles } from '../../data/locationData';
+import { overrideMapStyles } from './override-map-styles';
 
 
 interface MapProps extends google.maps.MapOptions {
@@ -10,7 +10,7 @@ interface MapProps extends google.maps.MapOptions {
     center?: google.maps.LatLngLiteral,
     zoom?: number,
     style?: { [key: string]: string },
-    children: any //todo:
+    children: any
 }
 
 const Map = ({ center, zoom, children, onClick, onIdle }: MapProps) => {
@@ -22,7 +22,7 @@ const Map = ({ center, zoom, children, onClick, onIdle }: MapProps) => {
             setMap(new window.google.maps.Map(ref.current, {
                 center,
                 zoom,
-                styles: nightModeStyles
+                styles: overrideMapStyles
             }));
         }
     }, [ref, map]);

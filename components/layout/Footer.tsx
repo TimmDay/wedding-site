@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { useState, useEffect } from 'react';
 import { TIMINGS } from '../../data/locationData';
-import { convertToUserTZ, TimingsType } from '../../utils/tz-conversion-utils';
+import { convertTimesToUserTZ, TimingsType } from '../../utils/tz-conversion-utils';
 
 
 
@@ -9,7 +9,7 @@ const Footer = () => {
     const [timings, setTimings] = useState<TimingsType>({ ...TIMINGS });
 
     useEffect(() => {
-        const newTimings = convertToUserTZ(timings);
+        const newTimings = convertTimesToUserTZ(timings);
         // @ts-ignore
         setTimings(newTimings);
     }, []);

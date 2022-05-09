@@ -5,7 +5,8 @@ import Map from './Map';
 import Marker from './Marker';
 import { locationData } from '../../data/locationData';
 import MapLoadingMsg from './MapLoadingMsg';
-import { svgMarker, svgMarkerPOI } from './custom-markers';
+import { svgMarker } from './custom-markers';
+import MapInfoBox from './MapInfoBox';
 
 
 const INITIAL_ZOOM = 13;
@@ -28,8 +29,6 @@ const MapGoog = ({ focusIndex=0, setFocusIndex }: MapGoogPropsType) => {
     useEffect(() => {
     }, [focusIndex]);
 
-    const onClick = (e: google.maps.MapMouseEvent) => {
-    };
     const onIdle = (m: google.maps.Map) => {
         setZoom(m.getZoom()!);
         setCenter(m.getCenter()!.toJSON());
@@ -41,7 +40,6 @@ const MapGoog = ({ focusIndex=0, setFocusIndex }: MapGoogPropsType) => {
                 <Map
                     center={center}
                     zoom={zoom}
-                    onClick={onClick}
                     onIdle={onIdle}
                 >
                     {locationData.map(({ lat, lng, primaryLoc, eventTitle, location }, index) => (
@@ -49,10 +47,7 @@ const MapGoog = ({ focusIndex=0, setFocusIndex }: MapGoogPropsType) => {
                             key={index}
                             position={{ lat, lng }}
                             // @ts-ignore
-                            icon={primaryLoc
-                                  ? svgMarker(index == focusIndex)
-                                  : svgMarkerPOI(index == focusIndex)
-                            }
+                            icon={svgMarker(index == focusIndex)}
                             title={eventTitle}
                             markerIndex={index}
                             setFocusIndex={setFocusIndex}
@@ -60,11 +55,19 @@ const MapGoog = ({ focusIndex=0, setFocusIndex }: MapGoogPropsType) => {
                     ))}
                 </Map>
             </Wrapper>
+
+            <MapInfoBox
+                eventTitle={locationData[focusIndex].eventTitle}
+                location={locationData[focusIndex].location}
+                start={locationData[focusIndex].start}
+                end={locationData[focusIndex].end}
+            />
         </StyledMapGoog>
     );
 };
 
 const StyledMapGoog = styled.div`
+  // hide google controls
   .gmnoprint {
     display: none;
   }

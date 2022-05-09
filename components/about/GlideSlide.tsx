@@ -5,10 +5,11 @@ import Image from 'next/image';
 type GlideSlideProps = {
     src: string,
     alt: string,
-    caption: string
+    caption: string,
+    isPortrait: boolean
 };
 
-const GlideSlide = ({ src, alt, caption }: GlideSlideProps) => {
+const GlideSlide = ({ src, alt, caption, isPortrait }: GlideSlideProps) => {
     return (
         <StyledGlideSlide className="glide__slide">
             <figure className="glide__slide slider">
@@ -16,11 +17,12 @@ const GlideSlide = ({ src, alt, caption }: GlideSlideProps) => {
                 <Image
                     src={src}
                     alt={alt}
-                    width={700}
-                    height={400}
+                    width={isPortrait ? 291 : 800}
+                    height={isPortrait ? 518 : 518}
                     loading="lazy"
+                    // layout="responsive"
                     // layout="fill"
-                    objectFit="cover"
+                    // objectFit="cover"
                 />
                 </div>
                 <figcaption>{caption}</figcaption>
@@ -42,8 +44,9 @@ const StyledGlideSlide = styled.li`
     border-radius: 5px;
     overflow: hidden;
     background-color: var(--color-primary-offset);
-    width: 700px;
-    height: 500px;
+    position: relative;
+    width: 740px;
+    height: 550px;
     justify-content: center;
     align-items: center;
   }

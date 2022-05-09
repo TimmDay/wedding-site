@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { convertOneToUserTZ } from '../../utils/tz-conversion-utils';
+import { convertTimeToUserTZ } from '../../utils/tz-conversion-utils';
 import { useEffect, useState } from 'react';
 
 
@@ -34,7 +34,7 @@ const LocationCard = ({ focusIndex, setFocusIndex, index, eventTitle, location, 
             {start &&
                 <div className="time-block">
                     <p>
-                        {`${start && convertOneToUserTZ(start)} - ${end && convertOneToUserTZ(end)}`}
+                        {`${start && convertTimeToUserTZ(start)} - ${end && convertTimeToUserTZ(end)}`}
                     </p>
                 </div>
             }

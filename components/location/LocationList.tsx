@@ -12,19 +12,24 @@ type LocationListProps = {
 const LocationList = ({focusIndex, setFocusIndex}: LocationListProps) => {
     return (
         <StyledLocationList>
-            {locationData.map(({ lat, lng, eventTitle, location, address, start, end }: any, index) => (
-                <LocationCard
-                    key={index}
-                    focusIndex={focusIndex}
-                    setFocusIndex={setFocusIndex}
-                    index={index}
-                    eventTitle={eventTitle}
-                    location={location}
-                    address={address}
-                    start={start}
-                    end={end}
-                />
-            ))}
+
+
+            {locationData.map(({ lat, lng, eventTitle, location, address, start, end }: any, index) => {
+
+                return (
+                    <LocationCard
+                        key={index}
+                        focusIndex={focusIndex}
+                        setFocusIndex={setFocusIndex}
+                        index={index}
+                        eventTitle={eventTitle}
+                        location={location}
+                        address={address}
+                        start={start}
+                        end={end}
+                    />
+                )
+            })}
         </StyledLocationList>
     );
 };

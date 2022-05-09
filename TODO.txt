@@ -1,44 +1,44 @@
 LOOP BACK
 
-[] location page styles for mobile
-[] clicking marker or event card rearranges it to display at top of list
-[] how to Carousel portrait photos? want them centered with black either side... or pass Slides a prop and do different styles
-[] style carousel caption
+[] big zoom link banner at top of Details page, and home page (monospace font for link)
 [] home page
+    [] with an intro note, hero photo and styled box-links to other pages
 [] our story page
   - write captions and collect photos for SwipeShow
 [] realign nav breakpoint to reflect width of headings for mobile
 [] change IconMobileNavToggle to relevant
 [] Carousel styles for mobile / bigger
-[] home page - with an intro note, hero photo and styled box-links to other pages
+[] get hosted on amplify
 [] get a domain name
 [] secure googmaps api key env etc
-[] get hosted on amplify
+
 [] smooth (horiz dist) of Carousel slide animation
-[] big zoom link banner at top of Details page, and home page
 [] get maps markers to gently transition on color change
-[] faq notes on event cards - ie where is parking, nearest bathroom, etc
+[] FAQ page - menu at donovans. why chose these photo locations
+    [] faq hover notes on event cards - ie where is parking, nearest bathroom, etc
+    - karens fav poem
+    - our top 3 fav animals on the internet
+    - our playlist
 [] go on a photo walk next time it is sunny to get some good panorama shots for banners
 [] full app audit for mobile styles
 [] check all the details/times/addresses etc for accuracy
-[] faq page - menu at donovans. why chose these photo locations
+[] how to Carousel portrait photos? want them centered with black either side... or pass Slides a prop and do different styles
+[] style carousel caption
+[] types. find all the anys, ts-ignores. clear todos, logs etc
 
 
 IF FINISH EARLY
 
-[] style maps tool tip
-[] map centers on marker when certain events selected
-[] selected marker goes to front of any other markers
-[] when marker selected, location list scrolls to bring that LocationCard in view
-[] figma custom svg icons for map markers. marker with love heart etc
 [] map loading icon (and general loading) is a love heart pulsing
+[] map centers on marker when certain events selected
+[] figma custom svg icons for map markers. marker with love heart etc
 [] Say Hi page
     [] users can input their name, a comment and location before/during the zoom ceremony to make a map
     [] users can upload a picture of them with us. picture shows at base of page
 [] FOOTER copyright in footer
 [] SkipToContent (get main els declared on every page etc)
-
 [] set prettier auto format settings to 2 lines after import block
+[] style maps tool tip
 
 
 PROCESS
@@ -60,7 +60,6 @@ Guestbook - leave a note, upload a photo
 Registry.
 
 RSVP.
-
 
 FAQ - parking, dietary restrictions, attire, how to say jewish prayer
 
@@ -87,3 +86,8 @@ FOOTER - zoom link, times/locations
 [x] get github project spun up and connected
 [x] Carousel bullets -> currently selected is highlighted
 [x] Carousel next arrows are fixed position somewhere
+[x] location page styles for mobile
+[x] clicking marker or event card rearranges it to display at top of list - instead put a selected note on top of map
+[x] selected marker goes to front of any other markers
+[x] when marker selected, location list scrolls to bring that LocationCard in view
+

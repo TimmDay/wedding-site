@@ -1,5 +1,4 @@
 import { Dispatch, SetStateAction, useEffect, useState } from 'react';
-import { svgMarker, svgMarkerPOI } from './custom-markers';
 
 
 type MarkerPropsType = google.maps.MarkerOptions & {
@@ -8,7 +7,7 @@ type MarkerPropsType = google.maps.MarkerOptions & {
 }
 
 const Marker = (options : MarkerPropsType) => {
-    const { title, position, icon, markerIndex, setFocusIndex } = options;
+    const { markerIndex, setFocusIndex } = options;
     const [marker, setMarker] = useState<google.maps.Marker>();
 
     useEffect(() => {
