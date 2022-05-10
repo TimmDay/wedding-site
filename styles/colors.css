@@ -6,8 +6,7 @@ body, body[data-theme="light"] {
     --color-secondary: #8A7429;
     --color-accent-1: #8A7429;
     --color-accent-2: #BBA351;
-
-    --box-shadow: 1px 5px 10px hsl(0deg 0% 0% / 0.07);
+    --box-shadow: 1px 5px 7px 0px var(--color-grey-200);
 }
 
 body[data-theme="dark"] {
@@ -18,13 +17,13 @@ body[data-theme="dark"] {
     --color-secondary: #BBA351;
     --color-accent-1: #BBA351;
     --color-accent-2: #8A7429;
-
-    --box-shadow: 0px 5px 10px hsl(0deg 0% 100% / 0.06);
+    --box-shadow: 1px 4px 8px 0px var(--color-grey-700);
 }
 
 body {
     background-color: var(--color-primary);
     color: var(--color-contrast);
+    /*--box-shadow: 0.2rem 0.2rem var(--color-grey-300)*/
 }
 
 *:focus-visible {

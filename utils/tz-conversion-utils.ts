@@ -1,9 +1,6 @@
 import { TIMINGS } from '../data/locationData';
-
-
-const { utcToZonedTime, zonedTimeToUtc, format } = require('date-fns-tz');
 import differenceInSeconds from 'date-fns/differenceInSeconds';
-import { parse } from 'date-fns';
+const { utcToZonedTime, zonedTimeToUtc, format } = require('date-fns-tz');
 
 
 const DEFAULT_TIME_ZONE = 'Australia/Melbourne';
@@ -25,11 +22,11 @@ export const getUserMachineTZ = () => Intl.DateTimeFormat().resolvedOptions().ti
 
 export const getHrsMinSecUntilTarget = (
     targetDateTime: string = DEFAULT_EVENT_START,
-    formatString: string = 'yyyy-MM-dd HH:mm'
 ) => {
+    const userTz = getUserMachineTZ();
+    const targetInUserTZ = convertDateTimeToLocalTZ(targetDateTime, userTz);
     const dateNow = new Date();
-    const dateTarget = parse(targetDateTime, formatString, new Date());
-    const duration = differenceInSeconds(dateTarget, dateNow);
+    const duration = differenceInSeconds(targetInUserTZ, dateNow);
 
     const hours = Math.floor(duration / 3600);
     const minutes = Math.floor(duration % 3600 / 60);

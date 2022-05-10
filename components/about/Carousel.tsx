@@ -18,7 +18,7 @@ const Carousel = () => {
 
     useEffect(() => {
         // @ts-ignore
-        glide.destroy(); //warning incorrect. things break without this line
+        glide.destroy(); //ts warning is incorrect. breaks without this line
         glide = new Glide('.glide', sliderConfiguration);
         glide.mount();
     }, []);
@@ -58,7 +58,7 @@ const Carousel = () => {
         </StyledCarousel>
     );
 };
-
+// todo: if currently displayed slide is not portrait change the height of the ul
 const StyledCarousel = styled.div`
   .glide__arrows {
     display: flex;

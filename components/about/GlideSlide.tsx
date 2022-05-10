@@ -11,7 +11,7 @@ type GlideSlideProps = {
 
 const GlideSlide = ({ src, alt, caption, isPortrait }: GlideSlideProps) => {
     return (
-        <StyledGlideSlide className="glide__slide">
+        <StyledGlideSlide className="glide__slide" isPortrait>
             <figure className="glide__slide slider">
                 <div style={{borderRadius: '5px', overflow: 'hidden'}}>
                 <Image
@@ -20,9 +20,14 @@ const GlideSlide = ({ src, alt, caption, isPortrait }: GlideSlideProps) => {
                     width={isPortrait ? 291 : 800}
                     height={isPortrait ? 518 : 518}
                     loading="lazy"
-                    // layout="responsive"
+                    placeholder="blur"
+                    blurDataURL={src}
+                    layout="intrinsic"
                     // layout="fill"
-                    // objectFit="cover"
+                    // objectFit="contain"
+                    // objectPosition="50% 50%"
+                    // layout="fixed"
+                    // layout="responsive"
                 />
                 </div>
                 <figcaption>{caption}</figcaption>
@@ -31,7 +36,7 @@ const GlideSlide = ({ src, alt, caption, isPortrait }: GlideSlideProps) => {
     );
 };
 
-const StyledGlideSlide = styled.li`
+const StyledGlideSlide = styled.li.attrs((props: {isPortrait: boolean}) => props)`
   figure {
     border: 1px var(--color-grey-100) solid;
     max-width: fit-content;
@@ -46,7 +51,9 @@ const StyledGlideSlide = styled.li`
     background-color: var(--color-primary-offset);
     position: relative;
     width: 740px;
-    height: 550px;
+    height: 520px;
+    //height: min-content;
+    // height: ${(props) => props.isPortrait ? '518' : '200px'}; //550px;
     justify-content: center;
     align-items: center;
   }
@@ -56,6 +63,13 @@ const StyledGlideSlide = styled.li`
     padding: var(--space-2) var(--space-4);
     font-family: var(--font-caption);
     max-width: inherit;
+  }
+
+  // bigger than mobile
+  @media (min-width: 35rem) {
+    width: 740px;
+    //height: 550px;
+    //height: min-content;
   }
 `;
 

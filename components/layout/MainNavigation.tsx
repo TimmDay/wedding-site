@@ -41,6 +41,13 @@ const MainNavigation = ({ isExpanded }: MainNavigationProps) => {
                         </a>
                     </Link>
                 </li>
+                <li>
+                    <Link href="/faq">
+                        <a className={router.pathname == '/faq' ? 'active' : ''}>
+                            FAQ
+                        </a>
+                    </Link>
+                </li>
                 {/*<li>*/}
                 {/*    <Link href="/guestbook">*/}
                 {/*        <a className={router.pathname == '/guestbook' ? 'active' : ''}>*/}
@@ -76,7 +83,6 @@ const StyledNav = styled.nav<{ isExpanded: boolean }>`
   z-index: 1000;
   margin: 0 auto;
   display: flex;
-  //justify-content: center;
   @supports (backdrop-filter: blur(1.5rem)) {
     backdrop-filter: blur(2.5rem);
   }
@@ -105,12 +111,6 @@ const StyledNav = styled.nav<{ isExpanded: boolean }>`
   & a.active {
     color: var(--color-contrast);
   }
-
-  //for logo to home
-  //li:first-child {
-  //  display: none;
-  //}
-
 
   // bigger than mobile
   @media (min-width: 35rem) {
@@ -142,16 +142,13 @@ const StyledNav = styled.nav<{ isExpanded: boolean }>`
       flex-grow: 1;
       align-items: flex-start;
     }
-
     & li {
       text-transform: uppercase;
     }
-
     & a {
       color: var(--color-secondary);
       font-size: var(--font-size-nav);
     }
-
     & a:hover,
     & a.active {
       color: var(--color-contrast);

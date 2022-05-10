@@ -1,37 +1,31 @@
 LOOP BACK
 
-[] big zoom link banner at top of Details page, and home page (monospace font for link)
-[] home page
-    [] with an intro note, hero photo and styled box-links to other pages
+[] FAQ data -> our playlist
+[] FAQ data -> donovans menu
+[] FAQ data -> parking options through the day and prices
+[] FAQ data -> if Im not invited can I come and say hello?
+[] FAQ data -> why chose these photo locations
+[] FAQ data -> is there a bathroom
+[] FAQ data -> what are the odds of poisonous Australian creatures?
+[] FAQ data -> fav animal clip on the internet (the seal)
+[] zoom link banner at top of Details page, and home page (monospace font for link)
 [] our story page
   - write captions and collect photos for SwipeShow
-[] realign nav breakpoint to reflect width of headings for mobile
-[] change IconMobileNavToggle to relevant
-[] Carousel styles for mobile / bigger
-[] get hosted on amplify
-[] get a domain name
-[] secure googmaps api key env etc
-
-[] smooth (horiz dist) of Carousel slide animation
-[] get maps markers to gently transition on color change
-[] FAQ page - menu at donovans. why chose these photo locations
-    [] faq hover notes on event cards - ie where is parking, nearest bathroom, etc
-    - karens fav poem
-    - our top 3 fav animals on the internet
-    - our playlist
-[] go on a photo walk next time it is sunny to get some good panorama shots for banners
 [] full app audit for mobile styles
 [] check all the details/times/addresses etc for accuracy
-[] how to Carousel portrait photos? want them centered with black either side... or pass Slides a prop and do different styles
-[] style carousel caption
-[] types. find all the anys, ts-ignores. clear todos, logs etc
+[] edit text app-wide with Karen
+[] go on a photo walk next time it is sunny to get some good panorama shots for banners
 
 
 IF FINISH EARLY
 
+[] types. find all the anys, ts-ignores. clear todos, logs etc
+[] change IconMobileNavToggle to relevant
+[] get maps markers to gently transition on color change
 [] map loading icon (and general loading) is a love heart pulsing
 [] map centers on marker when certain events selected
 [] figma custom svg icons for map markers. marker with love heart etc
+[] how to Carousel portrait photos? want them centered with black either side... or pass Slides a prop and do different styles
 [] Say Hi page
     [] users can input their name, a comment and location before/during the zoom ceremony to make a map
     [] users can upload a picture of them with us. picture shows at base of page
@@ -44,6 +38,9 @@ IF FINISH EARLY
 PROCESS
 yarn add styled-components && yarn add -D @types/styled-components
 yarn add nprogress && yarn add -D @types/nprogress
+
+for accordion (faq)
+yarn add @mui/material/Accordion @mui/material/AccordionDetails @mui/material/AccordionSummary @mui/material/Typography @mui/icons-material/ExpandMore
 
 
 FUTURE FEATURES
@@ -90,4 +87,15 @@ FOOTER - zoom link, times/locations
 [x] clicking marker or event card rearranges it to display at top of list - instead put a selected note on top of map
 [x] selected marker goes to front of any other markers
 [x] when marker selected, location list scrolls to bring that LocationCard in view
-
+[x] get hosted on amplify
+[x] get a domain name
+[x] secure googmaps api key env etc
+[x] Carousel styles for mobile / bigger
+[x] smooth (horiz dist) of Carousel slide animation
+[x] realign nav breakpoint to reflect width of headings for mobile
+[x] MAP page get the InfoBox media queried right so it doesnt go awol
+[x] home page - picture detail. circle img with offset circle behind it
+[x] FAQ page setup
+[x] home page
+    [x] align the text nicely
+    [x] with an intro note, hero photo and styled box-links to other pages

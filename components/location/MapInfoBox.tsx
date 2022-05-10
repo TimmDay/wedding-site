@@ -26,7 +26,7 @@ const StyledMapInfoBox = styled.div`
   padding-left: var(--space-2);
   color: var(--color-primary);
   position: absolute;
-  bottom: 105px;
+  bottom: 220px;
 
   h3 {
     font-family: var(--font-emphasis);
@@ -35,6 +35,11 @@ const StyledMapInfoBox = styled.div`
   p {
     padding: 0;
     margin: 0;
+  }
+
+   //bigger than mobile
+  @media (min-width: 35rem) {
+    bottom: 150px;
   }
 `;
 

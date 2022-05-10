@@ -8,7 +8,7 @@ type CountdownProps = {
 };
 
 const Countdown = ({ targetDateTime }: CountdownProps) => {
-    const [[hrs, mins, secs], setTime] = useState([0, 0, 0]);
+    const [[hrs, mins, secs], setTime] = useState([0, 0, 10]);
     const [isFinished, setIsFinished] = useState(false);
 
     const tick = () => {

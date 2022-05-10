@@ -35,7 +35,7 @@ const StyledHeader = styled.header<{ isHomePage: boolean }>`
     padding: var(--space-2) var(--space-8);
     max-height: var(--space-20);
     background: var(--color-primary-offset);
-    box-shadow: 0px 5px 9px 0 rgba(0,0,0,.11);
+    box-shadow: var(--box-shadow); //0px 5px 9px 0 rgba(0,0,0,.11);
   }
 `;
 

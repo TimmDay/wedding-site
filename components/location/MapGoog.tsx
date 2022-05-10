@@ -88,3 +88,4 @@ export default MapGoog;
 //https://www.npmjs.com/package/@googlemaps/js-api-loader
 //https://www.npmjs.com/package/@googlemaps/react-wrapper
 //https://github.com/googlemaps/js-samples/blob/09a6d80540ad197ff52669b08eec04b34f36798a/samples/react-map/index.tsx
+//https://www.youtube.com/watch?v=2_HZObVbe-g
