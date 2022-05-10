@@ -58,33 +58,16 @@ const Carousel = () => {
         </StyledCarousel>
     );
 };
-// todo: if currently displayed slide is not portrait change the height of the ul
+
 const StyledCarousel = styled.div`
   .glide__arrows {
-    display: flex;
-    align-content: center;
-    align-items: center;
-    justify-content: center;
-  }
-  .glide__arrow--left {
-    position: absolute;
-    display: block;
-    bottom: -12px;
-    left: calc(50% - 348px);
-    font-size: 25px;
-    color: var(--color-grey-100);
-    border: none;
-    background: none;
+    display: none;
   }
   .glide__arrow--right {
-    position: absolute;
-    display: block;
-    bottom: -12px;
-    right: calc(50% - 348px); //calc(-45px - var(--space-2));
-    font-size: 25px;
-    color: var(--color-grey-100);
-    border: none;
-    background: none;
+    display: none;
+  }
+  .glide__arrow--left {
+    display: none;
   }
   .glide__bullets {
     display: flex;
@@ -93,6 +76,7 @@ const StyledCarousel = styled.div`
     justify-content: center;
     margin-top: var(--space-2);
   }
+
   .glide__bullet {
     width: 20px;
     height: 20px;
@@ -100,13 +84,44 @@ const StyledCarousel = styled.div`
     background-color: var(--color-grey-100);
     border: none;
     padding: 0;
-    margin: 0 calc(var(--space-1)/2);
+    margin: 0 calc(var(--space-1) / 2);
     transition: transform 0.4s ease-out, background-color 0.3s ease-out;
   }
+
   .glide__bullet--active {
     background-color: var(--color-grey-300);
     transform: scale(1.2);
   }
+
+  // bigger than mobile
+  @media (min-width: 35rem) {
+    .glide__arrows {
+      display: flex;
+      align-content: center;
+      align-items: center;
+      justify-content: center;
+
+      .glide__arrow--left {
+        position: absolute;
+        display: block;
+        bottom: -12px;
+        left: calc(50% - 348px);
+        font-size: 25px;
+        color: var(--color-grey-100);
+        border: none;
+        background: none;
+      }
+      .glide__arrow--right {
+        position: absolute;
+        display: block;
+        bottom: -12px;
+        right: calc(50% - 348px); //calc(-45px - var(--space-2));
+        font-size: 25px;
+        color: var(--color-grey-100);
+        border: none;
+        background: none;
+      }
+    }
 `;
 
 export default Carousel;

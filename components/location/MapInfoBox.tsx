@@ -24,7 +24,7 @@ const MapInfoBox = ({ eventTitle, location, start, end }: MapInfoBoxProps) => {
 
 const StyledMapInfoBox = styled.div`
   padding-left: var(--space-2);
-  color: var(--color-primary);
+  color: #FCFFFF;
   position: absolute;
   bottom: 220px;
 
