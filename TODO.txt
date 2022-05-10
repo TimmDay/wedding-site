@@ -1,13 +1,9 @@
 LOOP BACK
 
 [-] fix mobile horiz scroll on homepage
-[x] fix mobile horiz scroll on about (hide the arrows completely)
-[x] fix maps issue (api?) mobile
 [-] fix mobile horiz scroll on location details
-[x] home page margins/spacing
 [] slide in menu -> closes after navving
 
-[x] better favicon
 [] FAQ data -> our playlist
 [] FAQ data -> donovans menu
 [] FAQ data -> parking options through the day and prices
@@ -107,3 +103,8 @@ FOOTER - zoom link, times/locations
 [x] home page
     [x] align the text nicely
     [x] with an intro note, hero photo and styled box-links to other pages
+[x] fix mobile horiz scroll on about (hide the arrows completely)
+[x] fix maps issue (api?) mobile
+[x] home page margins/spacing
+[x] better favicon
+[x] home page LinkBox -> images are shaded so text shows up better -> shade goes away on hover

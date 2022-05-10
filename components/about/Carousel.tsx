@@ -7,11 +7,9 @@ import { carouselData } from '../../data/carouselData';
 
 const sliderConfiguration: Options = {
     type: 'slider',
-    // gap: 20,
     perView: 1,
     startAt: 0,
 };
-
 
 const Carousel = () => {
     let glide = new Glide('.glide', sliderConfiguration);
@@ -63,12 +61,15 @@ const StyledCarousel = styled.div`
   .glide__arrows {
     display: none;
   }
+
   .glide__arrow--right {
     display: none;
   }
+
   .glide__arrow--left {
     display: none;
   }
+
   .glide__bullets {
     display: flex;
     align-content: center;
@@ -111,6 +112,7 @@ const StyledCarousel = styled.div`
         border: none;
         background: none;
       }
+
       .glide__arrow--right {
         position: absolute;
         display: block;
@@ -125,7 +127,6 @@ const StyledCarousel = styled.div`
 `;
 
 export default Carousel;
-
 
 //https://github.com/glidejs/glide/issues/376#issuecomment-618050617
 //https://glidejs.com/docs/setup

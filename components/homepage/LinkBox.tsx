@@ -3,17 +3,24 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 
-type LinkBoxProps = {};
+type LinkBoxProps = {
+    img1: string,
+    alt1: string,
+    img2: string,
+    alt2: string,
+    img3: string,
+    alt3: string,
+};
 
-const LinkBox = ({}: LinkBoxProps) => {
+const LinkBox = ({ img1, img2, img3, alt1, alt2, alt3 }: LinkBoxProps) => {
     return (
         <StyledLinkBox className="max-content">
             <Link href="/about">
                 <div>
                     <Image
-                        src={`/images/2015__boston.jpeg`}
-                        blurDataURL={`/images/2015__boston.jpeg`}
-                        alt={'T&K Boston 2015'}
+                        src={`/images/${img1}`}
+                        blurDataURL={`/images/${img1}`}
+                        alt={alt1}
                         width={150}
                         height={150}
                         loading="lazy"
@@ -31,9 +38,9 @@ const LinkBox = ({}: LinkBoxProps) => {
             <Link href="/location">
                 <div>
                     <Image
-                        src={`/images/2015__boston.jpeg`}
-                        blurDataURL={`/images/2015__boston.jpeg`}
-                        alt={'T&K Boston 2015'}
+                        src={`/images/${img2}`}
+                        blurDataURL={`/images/${img2}`}
+                        alt={alt2}
                         width={150}
                         height={150}
                         loading="lazy"
@@ -51,9 +58,9 @@ const LinkBox = ({}: LinkBoxProps) => {
             <Link href="/faq">
                 <div>
                     <Image
-                        src={`/images/2015__boston.jpeg`}
-                        blurDataURL={`/images/2015__boston.jpeg`}
-                        alt={'T&K Boston 2015'}
+                        src={`/images/${img3}`}
+                        blurDataURL={`/images/${img3}`}
+                        alt={alt3}
                         width={150}
                         height={150}
                         loading="lazy"
@@ -99,7 +106,27 @@ const StyledLinkBox = styled.div`
       text-transform: uppercase;
       z-index: 10;
       font-size: var(--heading-2);
+      opacity: 1;
+      transition: opacity .4s;
     }
+  }
+  div:hover {
+    p {
+      opacity: 0;
+    }
+  }
+
+  div:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-grey-200);
+    opacity: 0.5;
+    transition: opacity .5s;
+  }
+  div:hover:after {
+    opacity: 0;
   }
 `;
 

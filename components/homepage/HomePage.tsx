@@ -10,8 +10,8 @@ const HomePage = () => {
             <section className="max-content title-block">
                 <h1>{'We are Eloping!'}</h1>
                 <CircleOffsetImg
-                    path={'2015__boston.jpeg'}
-                    alt={'T&K Boston 2015'}
+                    path={'20220211_kt-stkildabeach.jpeg'}
+                    alt={'Tim & Karen at St Kilda music festival 2022'}
                 />
                 <p className="subheading">{'Sunday 19 June 2022 (11:15AM AEST)'}</p>
                 <Countdown/>
@@ -27,7 +27,14 @@ const HomePage = () => {
                 </p>
             </main>
 
-            <LinkBox />
+            <LinkBox
+                img1={"20170412_t-neckarmueller.jpeg"}
+                alt1={"Tim at Neckarmueller Tubingen 2017"}
+                img2={"20180918_kt-slovakiakiss.jpg"}
+                alt2={"Tim and Karen share a kiss in Slovakia 2018"}
+                img3={"20170412_k-neckarmueller.jpeg"}
+                alt3={"Karen at Neckarmueller Tubingen 2017"}
+            />
 
         </StyledMain>
     );
