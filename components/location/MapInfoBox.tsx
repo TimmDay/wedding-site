@@ -31,7 +31,6 @@ const StyledMapInfoBox = styled.div`
   h3 {
     font-family: var(--font-emphasis);
   }
-
   p {
     padding: 0;
     margin: 0;

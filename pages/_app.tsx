@@ -23,7 +23,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     return (
         <Layout>
             <Head>
-                <title>Karen & Tim are getting married 💌 </title>
+                <title>K & T get hitched</title>
                 <meta name="description" content="a wedding webpage for Karen and Tim's 2022 wedding"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
                 <meta charSet="utf-8"/>

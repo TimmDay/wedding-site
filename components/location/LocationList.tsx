@@ -39,9 +39,11 @@ const StyledLocationList = styled.div`
   overflow-y: scroll;
   padding: 3px var(--space-4) 0 var(--space-1);
   scroll-behavior: smooth;
+  margin-top: var(--space-2);
 
   @media (min-width: 35rem) {
     height: 650px;
+    margin-top: 0;
   }
 `;
 

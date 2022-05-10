@@ -2,6 +2,11 @@
     box-sizing: border-box;
 }
 
+html {
+    box-sizing: border-box;
+    overflow-y: hidden;
+}
+
 body, h1, h2, h3, h4, h5, h6, figure, picture, blockquote, caption {
     margin: 0;
 }

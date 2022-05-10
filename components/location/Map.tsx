@@ -53,7 +53,7 @@ const Map = ({ center, zoom, children, onClick, onIdle }: MapProps) => {
 
 const StyledMap = styled.div`
   #map {
-    overflow: visible;
+    overflow: hidden;
     width: 380px;
     height: 645px;
     border-radius: 8px;

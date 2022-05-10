@@ -1,13 +1,13 @@
 LOOP BACK
 
-[] fix mobile horiz scroll on homepage
-[-] fix mobile horiz scroll on about (hide the arrows completely)
+[-] fix mobile horiz scroll on homepage
+[x] fix mobile horiz scroll on about (hide the arrows completely)
 [x] fix maps issue (api?) mobile
-[] fix mobile horiz scroll on location details
-[] home page margins
+[-] fix mobile horiz scroll on location details
+[x] home page margins/spacing
 [] slide in menu -> closes after navving
 
-[] better favicon
+[x] better favicon
 [] FAQ data -> our playlist
 [] FAQ data -> donovans menu
 [] FAQ data -> parking options through the day and prices

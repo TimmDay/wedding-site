@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 import { useEffect, useState } from 'react';
-import { getHrsMinSecUntilTarget, getUserMachineTZ } from '../../utils/tz-conversion-utils';
+import { getHrsMinSecUntilTarget } from '../../utils/tz-conversion-utils';
 
 
 type CountdownProps = {
-    targetDateTime?: string //todo: ISO?
+    targetDateTime?: string
 };
 
 const Countdown = ({ targetDateTime }: CountdownProps) => {

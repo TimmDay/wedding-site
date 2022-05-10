@@ -26,7 +26,6 @@ const LocationPage = () => {
 const StyledLocationPage = styled.main`
   & > div {
     display: grid;
-    gap: var(--space-1);
     grid-template-columns: 1fr;
   }
 
@@ -34,6 +33,7 @@ const StyledLocationPage = styled.main`
   @media (min-width: 55rem) {
     & > div {
       grid-template-columns: 1fr 1fr;
+      gap: var(--space-1);
     }
   }
 `;
