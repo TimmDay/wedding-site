@@ -119,7 +119,7 @@ export const carouselData = [
     {
         src: "/images/WhatsApp Image 2022-05-02 at 6.34.38 PM.jpeg",
         alt: "Getting in our 1 hour of alotted exercise time at our personal beach near our personal lake and golf course (our 5km radius was excellent)",
-        caption: "Getting in our 1 hour of alotted exercise time at our personal beach near our personal lake and personal golf course - our 5km covid radius was excellent"
+        caption: "Getting in our 1 hour of alotted exercise time"
     },
     {
         src: "/images/WhatsApp Image 2022-05-02 at 6.30.34 PM (5).jpeg",

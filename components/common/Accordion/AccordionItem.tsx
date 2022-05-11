@@ -46,7 +46,8 @@ const StyledAccordionItem = styled.div.attrs((props: { isActive: boolean }) => p
   margin-bottom: var(--space-4);
   box-shadow: var(--box-shadow);
   -webkit-tap-highlight-color: transparent; //accessibility note: ok with this, as component inherantly provides strong visual feedback
-
+  max-width: 300px;
+  
   .accordion-link {
     text-decoration: none;
     display: flex;
@@ -86,6 +87,11 @@ const StyledAccordionItem = styled.div.attrs((props: { isActive: boolean }) => p
       font-style: italic;
       white-space: pre-line;
     }
+  }
+
+  // bigger than mobile
+  @media (min-width: 35rem) {
+    max-width: 500px;
   }
 `;
 

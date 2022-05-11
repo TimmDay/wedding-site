@@ -1,7 +1,7 @@
 .wrapper {
     display: grid;
     grid-template-columns: 1fr min(55ch, calc(100% - 84px)) 1fr;
-    /*grid-template-columns: 1fr min(65ch, calc(100% - 84px)) 1fr;*/ /* had horiz scroll issue mobile*/
+    /*grid-template-columns: 1fr min(65ch, calc(100% - 64px)) 1fr;*/ /* had horiz scroll issue mobile*/
     grid-column-gap: 32px;
 }
 .wrapper > * {

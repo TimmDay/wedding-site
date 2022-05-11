@@ -3,9 +3,7 @@ import React from 'react';
 import Carousel from './Carousel';
 
 
-type OurStoryProps = {};
-
-const OurStory = ({}: OurStoryProps) => {
+const OurStory = () => {
     return (
         <StyledOurStory className="wrapper">
             <section className="max-content">
@@ -93,7 +91,6 @@ const OurStory = ({}: OurStoryProps) => {
                     }
                 </p>
             </section>
-
         </StyledOurStory>
     );
 };

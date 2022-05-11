@@ -16,7 +16,7 @@ const Accordion = ({ data }: AccordionProps) => {
     const [activeItem, setActiveItem] = useState(999);
 
     return (
-        <StyledAccordion>
+        <StyledAccordion className="max-content">
             {data.map(({ question, answer }, index) => (
                 <AccordionItem
                     key={`accordion-${index}`}
