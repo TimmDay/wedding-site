@@ -23,11 +23,6 @@ const GlideSlide = ({ src, alt, caption, isPortrait }: GlideSlideProps) => {
                     placeholder="blur"
                     blurDataURL={src}
                     layout="intrinsic"
-                    // layout="fill"
-                    // objectFit="contain"
-                    // objectPosition="50% 50%"
-                    // layout="fixed"
-                    // layout="responsive"
                 />
                 </div>
                 <figcaption>{caption}</figcaption>
@@ -51,8 +46,8 @@ const StyledGlideSlide = styled.li.attrs((props: {isPortrait: boolean}) => props
     background-color: var(--color-primary-offset);
     position: relative;
     width: 740px;
-    height: 520px;
-    //height: min-content;
+    //height: 520px;
+    height: min-content;
     // height: ${(props) => props.isPortrait ? '518' : '200px'}; //550px;
     justify-content: center;
     align-items: center;

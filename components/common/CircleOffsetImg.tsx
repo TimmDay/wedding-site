@@ -14,8 +14,6 @@ const CirleOffsetImg = ({ path, alt }: CirleOffsetImgProps) => {
                 <Image
                     src={`/images/${path}`}
                     alt={`${alt}`}
-                    width={150}
-                    height={100}
                     loading="lazy"
                     layout="fill"
                     objectFit="cover"
