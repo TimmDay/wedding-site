@@ -37,7 +37,7 @@ const StyledCirleOffsetImg = styled.div`
     border-radius: 50%;
     overflow: hidden;
     height: 10rem;
-    width: 10rem;
+    width: 9.5rem;
     border: 3.5px solid var(--color-primary);
   }
   &>div:first-child {

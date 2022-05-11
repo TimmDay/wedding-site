@@ -48,7 +48,8 @@ const StyledMain = styled.main`
       font-family: var(--font-emphasis);
       font-size: var(--xtra-big-ass-heading);
       line-height: 1.15;
-      margin: var(--space-4) 0 calc(var(--space-8) + var(--space-2)) 0;
+      margin-top: var(--space-4); 
+      margin-bottom: calc(var(--space-8) + var(--space-2));
     }
     .subheading {
       margin-bottom: calc(-1*var(--space-2));

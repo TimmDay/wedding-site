@@ -55,18 +55,20 @@ const MapGoog = ({ focusIndex=0, setFocusIndex }: MapGoogPropsType) => {
                     ))}
                 </Map>
             </Wrapper>
-
             <MapInfoBox
                 eventTitle={locationData[focusIndex].eventTitle}
                 location={locationData[focusIndex].location}
                 start={locationData[focusIndex].start}
                 end={locationData[focusIndex].end}
             />
+
         </StyledMapGoog>
     );
 };
 
 const StyledMapGoog = styled.div`
+  position: relative;
+  
   // hide google controls
   .gmnoprint {
     display: none;

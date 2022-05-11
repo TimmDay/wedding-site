@@ -60,8 +60,8 @@ const StyledLocationCard = styled.div.attrs((props: {selected: boolean}) => prop
   }
   .time-block {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: -0.5px;
+    right: -0.5px;
     background: var(--color-accent-2);
     color: var(--color-contrast);
     border-radius: 0 3px 0 22px;

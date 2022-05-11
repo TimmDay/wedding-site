@@ -13,7 +13,7 @@ export const TIMINGS = {
 
 export const locationData = [
     {
-        eventTitle: 'Wedding Ceremony',
+        eventTitle: 'Ceremony',
         location: 'Margaret Craig Room, Old Treasury Building',
         address: '20 Spring st, East Melbourne 3000',
         lat: -37.813,
@@ -52,10 +52,21 @@ export const locationData = [
     //     end: TIMINGS.lunaEnd,
     //     primaryLoc: true
     // },
+    //TODO:
     {
-        eventTitle: 'High Tea and Art',
+        eventTitle: 'Toasts',
+        location: 'Garden State Hotel',
+        address: ' Melbourne 3002',
+        lat: -37.8225,
+        lng: 144.9691,
+        start: TIMINGS.lunaStart,
+        end: TIMINGS.lunaEnd,
+        primaryLoc: true
+    },
+    {
+        eventTitle: 'Art and Tea',
         location: 'National Gallery of Victoria',
-        address: '18o St Kilda Rd, Melbourne 3006',
+        address: '180 St Kilda Rd, Melbourne 3006',
         lat: -37.8225,
         lng: 144.9691,
         start: TIMINGS.lunaStart,

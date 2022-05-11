@@ -13,9 +13,7 @@ const LocationList = ({focusIndex, setFocusIndex}: LocationListProps) => {
     return (
         <StyledLocationList>
 
-
             {locationData.map(({ lat, lng, eventTitle, location, address, start, end }: any, index) => {
-
                 return (
                     <LocationCard
                         key={index}
@@ -41,8 +39,12 @@ const StyledLocationList = styled.div`
   scroll-behavior: smooth;
   margin-top: var(--space-2);
 
+  // bigger than mobile
   @media (min-width: 35rem) {
     height: 650px;
+  }
+  //bigger than tablet
+  @media (min-width: 55rem) {
     margin-top: 0;
   }
 `;

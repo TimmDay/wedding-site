@@ -27,6 +27,7 @@ const StyledLocationPage = styled.main`
   & > div {
     display: grid;
     grid-template-columns: 1fr;
+    gap: 0;
   }
 
   //bigger than mobile / when event cards dont get squashed
