@@ -34,7 +34,7 @@ const Carousel = () => {
                                 src={slide.src}
                                 alt={slide.alt}
                                 caption={slide.caption}
-                                isPortrait={slide.isPortrait}
+                                isPortrait={slide?.isPortrait ?? false}
                             />
                         ))}
                     </ul>
