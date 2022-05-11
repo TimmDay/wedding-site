@@ -6,10 +6,10 @@ type GlideSlideProps = {
     src: string,
     alt: string,
     caption: string,
-    isPortrait: boolean
+    isPortrait?: boolean
 };
 
-const GlideSlide = ({ src, alt, caption, isPortrait }: GlideSlideProps) => {
+const GlideSlide = ({ src, alt, caption, isPortrait=false }: GlideSlideProps) => {
     return (
         <StyledGlideSlide className="glide__slide" isPortrait>
             <figure className="glide__slide slider">

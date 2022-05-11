@@ -32,6 +32,11 @@ export const carouselData = [
         caption: "Tim kisses Karen at Tübingen Schokofest 2018. The best festival in the world where Europes best chocolatiers converged on our doorstep",
     },
     {
+        src: "/images/20171030_germanculture.jpeg",
+        alt: "2017 Bosch 'keep the kitchen clean' sign",
+        caption: "Germany has spot-the-difference level high standards of cleanliness (unlike Australian workplaces)"
+    },
+    {
         src: "/images/20170421_nadjaralf-unicorns.jpeg",
         alt: "With Nadja and Ralf at a Unicorns German-American football match for Karens bday 2017",
         caption: "With Nadja and Ralf at a Unicorns German-American football match for Karens bday 2017"
@@ -42,14 +47,14 @@ export const carouselData = [
         caption: "Karen's first time in Melbourne 2017"
     },
     {
-        src: "/images/20171030_germanculture.jpeg",
-        alt: "2017 Bosch 'keep the kitchen clean' sign",
-        caption: "Germany has spot-the-difference level high standards of cleanliness"
-    },
-    {
         src: "/images/20171227_florence_da_gherardo.jpeg",
         alt: "Karen at Da Gherardo in Florence 2017",
         caption: "Best meal of our relationship was margherita pizza at Da Gherardo in Florence after having a bottle of red while watching the Godfather"
+    },
+    {
+        src: "/images/20180917_warrior-karen-vienna.jpeg",
+        alt: "Karen warrior woman",
+        caption: "A warrior woman"
     },
     {
         src: "/images/20180918_kt-slovakiakiss.jpg",
@@ -64,7 +69,7 @@ export const carouselData = [
     {
         src: "/images/20190530_cindy-stefan-us-ls.jpeg",
         alt: "2019 with Cindy and Stefan",
-        caption: "Tübes with Cindy and Stefan 2019",
+        caption: "Tübes with our awesome neighbours Cindy and Stefan 2019",
     },
     {
         src: "/images/20210418_karen_fingerprints.jpeg",
@@ -82,11 +87,6 @@ export const carouselData = [
         src: "/images/20180525_kt-mohercliffs.jpeg",
         alt: "Cliffs of Moher, Ireland for Karen's 30th",
         caption: "Cliffs of Moher, Ireland for Karen's 30th"
-    },
-    {
-        src: "/images/20180917_warrior-karen-vienna.jpeg",
-        alt: "Karen warrior woman",
-        caption: "A warrior woman"
     },
     {
         src: "/images/20190623_kt-rekaatachalm.jpeg",
