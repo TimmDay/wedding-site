@@ -79,10 +79,11 @@ const StyledLinkBox = styled.div`
   align-items: center;
   align-content: center;
   flex-wrap: wrap;
-
+  margin-top: calc(-1*var(--space-8));
+  
   div {
     cursor: pointer;
-    margin: var(--space-1) var(--space-4);
+    margin: var(--space-2) var(--space-4);
     position: relative;
     overflow: hidden;
     height: 140px;

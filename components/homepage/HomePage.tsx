@@ -29,14 +29,10 @@ const HomePage = () => {
             <LinkBox
                 img1={'20180525_tk-mohercliffssitting.jpeg'}
                 alt1={'Tim and Karen on cliffs of Moher,  Ireland 2018'}
-                // img1={"20170412_t-neckarmueller.jpeg"}
-                // alt1={"Tim at Neckarmueller Tubingen 2017"}
                 img2={'20180918_kt-slovakiakiss.jpg'}
                 alt2={'Tim and Karen share a kiss in Slovakia 2018'}
                 img3={'20180616_kt-worldcuptubingen.jpeg'}
                 alt3={'Karen and Tim going to watch the soccer world cup in Tubingen 2018'}
-                // img3={"20170412_k-neckarmueller.jpeg"}
-                // alt3={"Karen at Neckarmueller Tubingen 2017"}
             />
 
         </StyledMain>
