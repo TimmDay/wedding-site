@@ -21,8 +21,6 @@ const LinkBox = ({ img1, img2, img3, alt1, alt2, alt3 }: LinkBoxProps) => {
                         src={`/images/${img1}`}
                         blurDataURL={`/images/${img1}`}
                         alt={alt1}
-                        width={150}
-                        height={150}
                         loading="lazy"
                         layout="fill"
                         objectFit="cover"
@@ -41,8 +39,6 @@ const LinkBox = ({ img1, img2, img3, alt1, alt2, alt3 }: LinkBoxProps) => {
                         src={`/images/${img2}`}
                         blurDataURL={`/images/${img2}`}
                         alt={alt2}
-                        width={150}
-                        height={150}
                         loading="lazy"
                         layout="fill"
                         objectFit="cover"
@@ -61,8 +57,6 @@ const LinkBox = ({ img1, img2, img3, alt1, alt2, alt3 }: LinkBoxProps) => {
                         src={`/images/${img3}`}
                         blurDataURL={`/images/${img3}`}
                         alt={alt3}
-                        width={150}
-                        height={150}
                         loading="lazy"
                         layout="fill"
                         objectFit="cover"
@@ -100,6 +94,7 @@ const StyledLinkBox = styled.div`
     justify-content: center;
     align-items: center;
     align-content: center;
+    -webkit-tap-highlight-color: transparent; //accessibility note: ok with this, as component inherantly provides strong visual feedback
 
     p {
       color: #F5F5F5;

@@ -19,21 +19,24 @@ const HomePage = () => {
             </section>
 
             <main className="max-content">
-                <p>{'We\'ve been planning this for a while...\nEnough setbacks, we\'re getting married!'}</p>
-                <p>{'This will be a small ceremony with a handful of family members and a government celebrant, followed by activities.' +
-                    ' Please don\'t be offended if you weren\'t invited - pretty much nobody was (to this version). We still love you.' +
-                    '\nWe hope to have the Jewish part of the ceremony, including the Ketoubah signing, in future in the USA. ' +
+                <p>{'Enough already, we\'re getting married!'}</p>
+                <p>{'This will be a small civil ceremony with a handful of family members. ' +
+                    'Jewish ceremony to follow in the US at some undetermined future date. ' +
                     'We also hope to visit with our dear friends in each of the cities we have called home for hugs, pubs and wine.'}
                 </p>
             </main>
 
             <LinkBox
-                img1={"20170412_t-neckarmueller.jpeg"}
-                alt1={"Tim at Neckarmueller Tubingen 2017"}
-                img2={"20180918_kt-slovakiakiss.jpg"}
-                alt2={"Tim and Karen share a kiss in Slovakia 2018"}
-                img3={"20170412_k-neckarmueller.jpeg"}
-                alt3={"Karen at Neckarmueller Tubingen 2017"}
+                img1={'20180525_tk-mohercliffssitting.jpeg'}
+                alt1={'Tim and Karen on cliffs of Moher,  Ireland 2018'}
+                // img1={"20170412_t-neckarmueller.jpeg"}
+                // alt1={"Tim at Neckarmueller Tubingen 2017"}
+                img2={'20180918_kt-slovakiakiss.jpg'}
+                alt2={'Tim and Karen share a kiss in Slovakia 2018'}
+                img3={'20180616_kt-worldcuptubingen.jpeg'}
+                alt3={'Karen and Tim going to watch the soccer world cup in Tubingen 2018'}
+                // img3={"20170412_k-neckarmueller.jpeg"}
+                // alt3={"Karen at Neckarmueller Tubingen 2017"}
             />
 
         </StyledMain>
@@ -48,20 +51,24 @@ const StyledMain = styled.main`
       font-family: var(--font-emphasis);
       font-size: var(--xtra-big-ass-heading);
       line-height: 1.15;
-      margin-top: var(--space-4); 
+      margin-top: var(--space-4);
       margin-bottom: calc(var(--space-8) + var(--space-2));
     }
+
     .subheading {
-      margin-bottom: calc(-1*var(--space-2));
+      margin-bottom: calc(-1 * var(--space-2));
     }
+
     .zoom-link {
       color: var(--color-accent-1);
       margin-top: calc(-1 * var(--space-2));
     }
+
     section > p {
       white-space: pre-line
     }
   }
+
   main {
     margin-top: calc(-1 * var(--space-6));
   }

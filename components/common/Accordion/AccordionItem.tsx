@@ -45,6 +45,7 @@ const StyledAccordionItem = styled.div.attrs((props: { isActive: boolean }) => p
   padding: 1rem;
   margin-bottom: var(--space-4);
   box-shadow: var(--box-shadow);
+  -webkit-tap-highlight-color: transparent; //accessibility note: ok with this, as component inherantly provides strong visual feedback
 
   .accordion-link {
     text-decoration: none;

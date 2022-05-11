@@ -5,7 +5,7 @@ LOOP BACK
 [-] fix mapinfo box moving around
 [x] fix event card title obsfus on mobile
 [] slide in menu -> closes after navving
-[] update our story text
+[x] update our story text
 [] update faqs
 [] finalise schedule - pub toasts?
 [] change photos in LinkBox homepage. the singles with beer arent great
@@ -18,6 +18,12 @@ LOOP BACK
 [] FAQ data -> is there a bathroom
 [] FAQ data -> what are the odds of poisonous Australian creatures?
 [] FAQ data -> fav animal clip on the internet (the seal)
+
+{} Story photos
+- Snowpocalypse
+- multicultural passover seder
+- Stocherkahn
+-
 [] zoom link banner at top of Details page, and home page (monospace font for link)
 [] our story page
   - write captions and collect photos for SwipeShow

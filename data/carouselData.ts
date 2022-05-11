@@ -30,12 +30,12 @@ export const carouselData = [
         caption: "much paper for the immigration & covid authorities of USA, AUS and Germany",
         isPortrait: false
     },
-    {
-        src: "/images/2017__strasbourg-p.jpeg",
-        alt: "in Strasbourg France",
-        caption: "2017 in Strasbourg France",
-        isPortrait: true
-    },
+    // {
+    //     src: "/images/2017__strasbourg-p.jpeg",
+    //     alt: "in Strasbourg France",
+    //     caption: "2017 in Strasbourg France",
+    //     isPortrait: true
+    // },
     // {
     //     src: "/images/",
     //     alt: "",
