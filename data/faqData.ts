@@ -35,13 +35,17 @@ export const faqData: FaqData[] = [
         question: "What happened to that quirky Rabbi you originally had booked to do the ceremony?",
         answer: "When covid started he went into the forest."
     },
-    {
-        question: "When the party version of this wedding still had the go ahead, what was the prospective playlist?",
-        answer: "Keino"
-    },
+    // {
+    //     question: "When the party version of this wedding still had the go ahead, what was the prospective playlist?",
+    //     answer: "Keino"
+    // },
     {
         question: "What are the odds that I will be bitten by a venomous Australian creature?",
         answer: "Lower than the odds you will be bitten by a shark."
+    },
+    {
+        question: "In Dublin, was the pretty woman staring into Tim's eyes really flirting with him like he insisted to Karen that she was?",
+        answer: "No. She was an ophthalmologist who had observed a defect in Tim's eye, which she quietly alerted Karen to later"
     },
     {
         question: "What is Karen and Tim’s favorite seal?",
