@@ -19,7 +19,7 @@ const Countdown = ({ targetDateTime }: CountdownProps) => {
     };
 
     useEffect(() => {
-        const { hours, minutes, seconds } = getHrsMinSecUntilTarget();
+        const { hours, minutes, seconds } = getHrsMinSecUntilTarget(targetDateTime);
         setTime([hours, minutes, seconds]);
     }, []);
 

@@ -1,22 +1,10 @@
-import { TIMINGS } from '../data/locationData';
+import { TIMINGS, TimingsType } from '../data/locationData';
 import differenceInSeconds from 'date-fns/differenceInSeconds';
 const { utcToZonedTime, zonedTimeToUtc, format } = require('date-fns-tz');
 
 
 const DEFAULT_TIME_ZONE = 'Australia/Melbourne';
 const DEFAULT_EVENT_START = TIMINGS.ceremonyStart;
-
-export type TimingsType = {
-    ceremonyStart: string,
-    ceremonyEnd: string,
-    photosStart: string,
-    photosEnd: string,
-    ngvStart: string,
-    ngvEnd: string,
-    lunaStart: string,
-    lunaEnd: string,
-    dinnerStart: string
-};
 
 export const getUserMachineTZ = () => Intl.DateTimeFormat().resolvedOptions().timeZone ?? DEFAULT_TIME_ZONE;
 

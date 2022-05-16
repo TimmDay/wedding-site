@@ -1,7 +1,7 @@
 
 type FaqData = {
     question: string,
-    answer: string
+    answer: string,
 }
 
 export const faqData: FaqData[] = [
@@ -11,7 +11,7 @@ export const faqData: FaqData[] = [
     },
     {
         question: "What is Karen's favorite poem?",
-        answer: "Oh chark,\n your are a cherry and a shark,\n you are both sweet and mean at the same time,\nyour body is scary but your head is a cherry"
+        answer: "Oh chark,\n you're a cherry and a shark,\n you are both sweet and mean at the same time,\nyour body is scary but your head is a cherry"
     },
     {
         question: "Do you have a registry?",

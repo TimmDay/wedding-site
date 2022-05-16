@@ -1,14 +1,40 @@
-// noted in Australia/Melbourne
+// all times quoted in Australia/Melbourne
+export type TimingsType = {
+    ceremonyStart: string,
+    ceremonyEnd: string,
+    photosStart: string,
+    photosEnd: string,
+    specialPhotosStart: string,
+    specialPhotosEnd: string,
+    ngvStart: string,
+    ngvEnd: string,
+    cocktailHourStart: string,
+    cocktailHourEnd: string,
+    dinnerStart: string,
+    dinnerEnd: string,
+    zoomToastStart: string,
+    zoomToastEnd: string,
+};
+
 export const TIMINGS = {
+    // preBridalPhotosStart: '2022-06-19 10:30',
+    // preBridalPhotosEnd: '2022-06-19 10:30',
     ceremonyStart: '2022-06-19 11:15',
     ceremonyEnd: '2022-06-19 11:45',
-    photosStart: '2022-06-19 12:00',
-    photosEnd: '2022-06-19 13:30',
+    photosStart: '2022-06-19 11:45', //treasury steps, treasury gardens
+    photosEnd: '2022-06-19 13:00',
+    specialPhotosStart: '2022-06-19 13:00',
+    specialPhotosEnd: '2022-06-19 14:00',
     ngvStart: '2022-06-19 13:30',
     ngvEnd: '2022-06-19 14:30',
-    lunaStart: '2022-06-19 14:30',
-    lunaEnd: '2022-06-19 18:00',
-    dinnerStart: '2022-06-19 18:00',
+    // lunaStart: '2022-06-19 14:30',
+    // lunaEnd: '2022-06-19 18:00',
+    cocktailHourStart: '2022-06-19 18:00',
+    cocktailHourEnd: '2022-06-19 19:00',
+    dinnerStart: '2022-06-19 19:15',
+    dinnerEnd: '2022-06-19 21:15',
+    zoomToastStart: '2022-06-19 21:30',
+    zoomToastEnd: '2022-06-19 22:30',
 };
 
 export const locationData = [
@@ -52,25 +78,24 @@ export const locationData = [
     //     end: TIMINGS.lunaEnd,
     //     primaryLoc: true
     // },
-    //TODO:
     {
-        eventTitle: 'Toasts',
-        location: 'Garden State Hotel',
-        address: ' Melbourne 3002',
-        lat: -37.8225,
-        lng: 144.9691,
-        start: TIMINGS.lunaStart,
-        end: TIMINGS.lunaEnd,
-        primaryLoc: true
-    },
-    {
-        eventTitle: 'Art and Tea',
+        eventTitle: 'Casual Art and Tea',
         location: 'National Gallery of Victoria',
         address: '180 St Kilda Rd, Melbourne 3006',
         lat: -37.8225,
         lng: 144.9691,
-        start: TIMINGS.lunaStart,
-        end: TIMINGS.lunaEnd,
+        start: TIMINGS.ngvStart,
+        end: TIMINGS.ngvEnd,
+        primaryLoc: true
+    },
+    {
+        eventTitle: 'Cocktail Hour',
+        location: 'Donovans',
+        address: '40 Jacka Blvd, St Kilda VIC 3182',
+        lat: -37.8684,
+        lng: 144.9751,
+        start: TIMINGS.cocktailHourStart,
+        end: TIMINGS.cocktailHourEnd,
         primaryLoc: true
     },
     {
@@ -80,7 +105,19 @@ export const locationData = [
         lat: -37.8684,
         lng: 144.9751,
         start: TIMINGS.dinnerStart,
-        end: '',
+        end: TIMINGS.dinnerEnd,
+        primaryLoc: true
+    },
+    {
+        eventTitle: 'Toasts',
+        location: 'Donovans',
+        address: '40 Jacka Blvd, St Kilda VIC 3182',
+        // location: 'Garden State Hotel',
+        // address: ' Melbourne 3002',
+        lat: -37.8684,
+        lng: 144.9751,
+        start: TIMINGS.zoomToastStart,
+        end: TIMINGS.zoomToastEnd,
         primaryLoc: true
     },
     {

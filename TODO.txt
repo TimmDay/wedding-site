@@ -1,18 +1,14 @@
 LOOP BACK
 
+[x] finalise schedule - pub toasts?
+[x] zoom toasts time to HomePage
 [] have photos of you with us? Please send them on whatsapp, we will add them!
-[-] fix mobile horiz scroll on location details
+[] note/direction to SWIPE on carousel
 [] slide in menu -> closes after navving
-[] update faqs
-[] finalise schedule - pub toasts?
-
-[] FAQ data -> our playlist
-[] FAQ data -> if Im not invited can I come and say hello?
-[] FAQ data -> why chose these photo locations
-
-[x] Story photos
-
 [] lederhosen photo to homepage
+[] FAQ data -> our playlist
+
+[] FAQ data -> why chose these photo locations
 
 [] zoom link banner at top of Details page, and home page (monospace font for link)
 [] our story page
@@ -116,3 +112,6 @@ FOOTER - zoom link, times/locations
 [x] fix event card title obsfus on mobile
 [x] change photos in LinkBox homepage. the singles with beer arent great
 [x] update our story text
+[x] fix mobile horiz scroll on location details
+[x] update faqs
+[x] Story photos

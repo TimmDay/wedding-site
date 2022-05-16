@@ -2,9 +2,20 @@ import styled from 'styled-components';
 import Countdown from '../common/Countdown';
 import CircleOffsetImg from '../common/CircleOffsetImg';
 import LinkBox from './LinkBox';
+import { TIMINGS, TimingsType } from '../../data/locationData';
+import { useEffect, useState } from 'react';
+import { convertTimesToUserTZ } from '../../utils/tz-conversion-utils';
 
 
 const HomePage = () => {
+    const [timings, setTimings] = useState<TimingsType>({ ...TIMINGS });
+
+    useEffect(() => {
+        const newTimings = convertTimesToUserTZ(timings);
+        // @ts-ignore
+        setTimings(newTimings);
+    }, []);
+
     return (
         <StyledMain id="main wrapper">
             <section className="max-content title-block">
@@ -14,8 +25,10 @@ const HomePage = () => {
                     alt={'Tim & Karen at St Kilda music festival 2022'}
                 />
                 <p className="subheading">{'Sunday 19 June 2022 (11:15AM AEST)'}</p>
-                <Countdown/>
-                <p className="zoom-link">{`Ceremony Zoom Link: ${'tbc'}`}</p>
+                <Countdown targetDateTime={TIMINGS.ceremonyStart}/>
+                <p className="zoom-link">{`Ceremony Zoom Link (${timings.ceremonyStart}): ${'tbc'}`}</p>
+                <p className="zoom-link">{`Toasts Zoom Link (${timings.zoomToastStart}): ${'tbc'}`}</p>
+
             </section>
 
             <main className="max-content">

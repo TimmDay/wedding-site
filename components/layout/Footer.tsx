@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { useState, useEffect } from 'react';
-import { TIMINGS } from '../../data/locationData';
-import { convertTimesToUserTZ, TimingsType } from '../../utils/tz-conversion-utils';
+import { TIMINGS, TimingsType } from '../../data/locationData';
+import { convertTimesToUserTZ } from '../../utils/tz-conversion-utils';
 
 
 
@@ -28,24 +28,29 @@ const Footer = () => {
                     <h4 className="col-header">Where</h4>
                     <h4 className="col-header">When</h4>
 
-                    <div>zoom ceremony</div>
+                    <div>zoom ceremony link</div>
                     <div className="align-left">
                         <p>{'https:// ... '}</p>
                     </div>
                     <p>{`${timings.ceremonyStart} - ${timings.ceremonyEnd}`}</p>
 
-                    <div>ceremony</div>
+                    <div>Ceremony</div>
                     <div className="align-left">
                         <p>{"Margaret Craig Room, Old Treasury Building"}</p>
                         <p>{"20 Spring St, East Melbourne 3000"}</p>
                     </div>
                     <p>{`${timings.ceremonyStart} - ${timings.ceremonyEnd}`}</p>
 
-                    <p>photo spots</p>
+                    <p>Photos</p>
                     <div className="align-left">
-                        <p>{"Treasury Gardens, Albert Park Lake, Catani Gardens, St Kilda pier"}</p>
+                        <p>{"Old Treasury building, Treasury Gardens"}</p>
                     </div>
                     <p>{`${timings.photosStart} - ${timings.photosEnd}`}</p>
+                    {/*<p>photo spots</p>*/}
+                    {/*<div className="align-left">*/}
+                    {/*    <p>{"Treasury Gardens, Albert Park Lake, Catani Gardens, St Kilda pier"}</p>*/}
+                    {/*</div>*/}
+                    {/*<p>{`${timings.photosStart} - ${timings.photosEnd}`}</p>*/}
 
                     <p>High Tea and Art</p>
                     <div className="align-left">
@@ -61,12 +66,29 @@ const Footer = () => {
                     {/*</div>*/}
                     {/*<p>{`${timings.lunaStart} - ${timings.lunaEnd}`}</p>*/}
 
+                    <p>Cocktail Hour</p>
+                    <div className="align-left">
+                        <p>{"Donovans 40 Jacka Blvd, St Kilda 3182"}</p>
+                    </div>
+                    <p>{`${timings.photosStart} - ${timings.photosEnd}`}</p>
+
                     <p>Dinner</p>
                     <div className="align-left">
-                        <p>{"Donovans"}</p>
-                        <p>{"40 Jacka Blvd, St Kilda 3182"}</p>
+                        <p>{"Donovans 40 Jacka Blvd, St Kilda 3182"}</p>
                     </div>
-                    <p>{`${timings.dinnerStart} - late`}</p>
+                    <p>{`${timings.dinnerStart} - ${timings.dinnerEnd}`}</p>
+
+                    <p>Toasts</p>
+                    <div className="align-left">
+                        <p>{"Donovans 40 Jacka Blvd, St Kilda 3182"}</p>
+                    </div>
+                    <p>{`${timings.zoomToastStart} - ${timings.zoomToastEnd}`}</p>
+
+                    <div>zoom toasts link</div>
+                    <div className="align-left">
+                        <p>{'https:// ... '}</p>
+                    </div>
+                    <p>{`${timings.zoomToastStart} - ${timings.zoomToastEnd}`}</p>
                 </div>
 
                 {/*<div className="copyright">*/
