@@ -19,14 +19,14 @@ const Countdown = ({ targetDateTime }: CountdownProps) => {
     };
 
     useEffect(() => {
-        const { hours, minutes, seconds } = getHrsMinSecUntilTarget(targetDateTime);
-        setTime([hours, minutes, seconds]);
-    }, []);
-
-    useEffect(() => {
         const timerId = setInterval(() => tick(), 1000);
         return () => clearInterval(timerId);
     });
+    useEffect(() => {
+        const { hours, minutes, seconds } = getHrsMinSecUntilTarget(targetDateTime);
+        setTime([hours, minutes, seconds]);
+    }, [targetDateTime]);
+
 
     return (
         <StyledCountdown>

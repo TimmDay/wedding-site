@@ -39,7 +39,10 @@ const convertDateTimeToLocalTZ = (time: string, tz: string = DEFAULT_TIME_ZONE) 
 
 export const convertTimesToUserTZ = (timings: TimingsType) => {
     const tz = getUserMachineTZ();
-    const newTimings = Object.keys(timings).reduce(
+    let newTimings = {};
+    if (!timings) return newTimings;
+
+    newTimings = Object.keys(timings).reduce(
         (acc, key) => {
             const formatString: string = key.includes('End') ? 'h:mm bbb (z)' : 'h:mm bbb';
             const resultTimeString = format(

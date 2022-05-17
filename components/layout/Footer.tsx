@@ -52,7 +52,7 @@ const Footer = () => {
                     {/*</div>*/}
                     {/*<p>{`${timings.photosStart} - ${timings.photosEnd}`}</p>*/}
 
-                    <p>High Tea and Art</p>
+                    <p>Casual hang out, tea and art</p>
                     <div className="align-left">
                         <p>{"National Gallery of Victoria"}</p>
                         <p>{"180 St Kilda Rd Melbourne 3006"}</p>
