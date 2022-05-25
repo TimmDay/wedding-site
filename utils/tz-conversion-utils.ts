@@ -44,7 +44,7 @@ export const convertTimesToUserTZ = (timings: TimingsType) => {
 
     newTimings = Object.keys(timings).reduce(
         (acc, key) => {
-            const formatString: string = key.includes('End') ? 'h:mm bbb (z)' : 'h:mm bbb';
+            const formatString: string = key.includes('End') ? 'h:mm bbb (z)' : 'E h:mm bbb';
             const resultTimeString = format(
                 // @ts-ignore
                 convertDateTimeToLocalTZ(timings[key], tz),
@@ -63,8 +63,14 @@ export const convertTimeToUserTZ = (timing: string) => {
     const tz = getUserMachineTZ();
     const localDateTime = convertDateTimeToLocalTZ(timing, tz);
     const formatString: string = 'h:mm bbb';
-    const resultTimeString = format(localDateTime, formatString, { timeZone: tz });
-    return resultTimeString;
+    return format(localDateTime, formatString, { timeZone: tz });;
+};
+
+export const convertTimeToUserTZWithDay = (timing: string) => {
+    const tz = getUserMachineTZ();
+    const localDateTime = convertDateTimeToLocalTZ(timing, tz);
+    const formatString: string = 'E h:mm bbb';
+    return format(localDateTime, formatString, { timeZone: tz });
 };
 
 //https://date-fns.org/docs/Getting-Started
