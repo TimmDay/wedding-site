@@ -74,7 +74,7 @@ const StyledMain = styled.main`
     }
 
     section > p {
-      white-space: pre-line
+      white-space: pre-line;
     }
   }
 

@@ -68,22 +68,21 @@ const LinkBox = ({ img1, img2, img3, alt1, alt2, alt3 }: LinkBoxProps) => {
                     </p>
                 </div>
             </Link>
-
         </StyledLinkBox>
     );
 };
 
 const StyledLinkBox = styled.div`
   display: flex;
+  gap: var(--space-8);
   justify-content: center;
   align-items: center;
   align-content: center;
   flex-wrap: wrap;
-  margin-top: calc(-1*var(--space-8));
+  margin-bottom: var(--space-8);
   
   div {
     cursor: pointer;
-    margin: var(--space-2) var(--space-4);
     position: relative;
     overflow: hidden;
     height: 140px;
@@ -123,6 +122,11 @@ const StyledLinkBox = styled.div`
   }
   div:hover:after {
     opacity: 0;
+  }
+
+  //bigger than mobile
+  @media (min-width: 35rem) {
+    gap: var(--space-12);
   }
 `;
 
