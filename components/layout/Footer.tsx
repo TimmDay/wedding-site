@@ -4,7 +4,6 @@ import { TIMINGS, TimingsType } from '../../data/locationData';
 import { convertTimesToUserTZ } from '../../utils/tz-conversion-utils';
 
 
-
 const Footer = () => {
     const [timings, setTimings] = useState<TimingsType>({ ...TIMINGS });
 
@@ -70,7 +69,7 @@ const Footer = () => {
                     <div className="align-left">
                         <p>{"Donovans 40 Jacka Blvd, St Kilda 3182"}</p>
                     </div>
-                    <p>{`${timings.photosStart} - ${timings.photosEnd}`}</p>
+                    <p>{`${timings.cocktailHourStart} - ${timings.cocktailHourEnd}`}</p>
 
                     <p>Dinner</p>
                     <div className="align-left">
