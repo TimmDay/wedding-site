@@ -13,7 +13,6 @@ const Footer = () => {
         setTimings(newTimings);
     }, []);
 
-
     return (
         <StyledWrapper className="full-bleed">
             <StyledFooter className="max-content">
