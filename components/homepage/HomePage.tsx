@@ -32,9 +32,11 @@ const HomePage = () => {
                 <div className="zoom-link">
                   <p>
                     {`Ceremony (${timings.ceremonyStart})`}
-                    <a href={LINKS.zoomCeremonyLink}>
+                    <span>
+                      <a href={LINKS.zoomCeremonyLink}>
                       {`Attend Zoom Ceremony`}
                     </a>
+                    </span>
                     {`pw: ${LINKS.zoomCeremonyPass}`}
                   </p>
                 </div>
@@ -42,9 +44,11 @@ const HomePage = () => {
                 <div className="zoom-link">
                   <p>
                     {`Toasts (${timings.zoomToastStart})`}
+                    <span>
                     <a href={LINKS.zoomToastsLink}>
                       {`Attend Zoom Toasts`}
                     </a>
+                    </span>
                     {`pw: ${LINKS.zoomToastsPass}`}
                   </p>
                 </div>
@@ -104,6 +108,10 @@ const StyledMain = styled.main`
         background: var(--color-contrast);
         border-radius: 8px;
         cursor: pointer;
+      }
+
+      span {
+        display: inline-block;
       }
 
       a:hover {
