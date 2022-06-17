@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { useState, useEffect } from 'react';
-import { TIMINGS, TimingsType } from '../../data/locationData';
+import { TIMINGS, LINKS, TimingsType } from '../../data/locationData';
 import { convertTimesToUserTZ } from '../../utils/tz-conversion-utils';
 
 
@@ -26,9 +26,12 @@ const Footer = () => {
                     <h4 className="col-header">Where</h4>
                     <h4 className="col-header">When</h4>
 
-                    <div>zoom ceremony link</div>
+                    <div>zoom ceremony</div>
                     <div className="align-left">
-                        <p>{'https:// ... '}</p>
+                        <p>
+                          <a href={LINKS.zoomCeremonyLink}>open zoom</a>
+                          {` (pw: ${LINKS.zoomCeremonyPass})`}
+                        </p>
                     </div>
                     <p>{`${timings.ceremonyStart} - ${timings.ceremonyEnd}`}</p>
 
@@ -50,7 +53,7 @@ const Footer = () => {
                     {/*</div>*/}
                     {/*<p>{`${timings.photosStart} - ${timings.photosEnd}`}</p>*/}
 
-                    <p>Casual hang out, tea and art</p>
+                    <p>Casual tea and art</p>
                     <div className="align-left">
                         <p>{"National Gallery of Victoria"}</p>
                         <p>{"180 St Kilda Rd Melbourne 3006"}</p>
@@ -84,7 +87,10 @@ const Footer = () => {
 
                     <div>zoom toasts link</div>
                     <div className="align-left">
-                        <p>{'https:// ... '}</p>
+                        <p>
+                          <a href={LINKS.zoomToastsLink}>open zoom</a>
+                          {` (pw: ${LINKS.zoomToastsPass})`}
+                        </p>
                     </div>
                     <p>{`${timings.zoomToastStart} - ${timings.zoomToastEnd}`}</p>
                 </div>
@@ -163,6 +169,10 @@ const StyledFooter = styled.div`
 
   .align-left {
     text-align: left;
+  }
+
+  a {
+    color: var(--color-secondary);
   }
 
   //.copyright {

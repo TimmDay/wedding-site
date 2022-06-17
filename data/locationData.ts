@@ -13,8 +13,15 @@ export type TimingsType = {
     dinnerStart: string,
     dinnerEnd: string,
     zoomToastStart: string,
-    zoomToastEnd: string,
+    zoomToastEnd: string
 };
+
+export type LinksType = {
+    zoomCeremonyLink: string,
+    zoomCeremonyPass: string,
+    zoomToastsLink: string,
+    zoomToastsPass: string
+}
 
 export const TIMINGS = {
     // preBridalPhotosStart: '2022-06-19 10:30',
@@ -25,7 +32,7 @@ export const TIMINGS = {
     photosEnd: '2022-06-19 13:00',
     specialPhotosStart: '2022-06-19 13:00',
     specialPhotosEnd: '2022-06-19 14:00',
-    ngvStart: '2022-06-19 14:00',
+    ngvStart: '2022-06-19 13:00',
     ngvEnd: '2022-06-19 17:30',
     // lunaStart: '2022-06-19 14:30',
     // lunaEnd: '2022-06-19 18:00',
@@ -36,6 +43,13 @@ export const TIMINGS = {
     zoomToastStart: '2022-06-19 21:30',
     zoomToastEnd: '2022-06-19 22:30',
 };
+
+export const LINKS = {
+    zoomCeremonyLink: 'https://us02web.zoom.us/j/85086008213?pwd=WVZOcmVhaFRqcVY2MmoxUFdhZWpSUT09',
+    zoomCeremonyPass: 'DayLowe',
+    zoomToastsLink: 'https://us02web.zoom.us/j/85917719055?pwd=U0VNelZNckdNM29LbHpiajNHeWlrQT09',
+    zoomToastsPass: 'DayLowe',
+}
 
 export const locationData = [
     {

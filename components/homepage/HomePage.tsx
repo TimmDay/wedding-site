@@ -2,13 +2,15 @@ import styled from 'styled-components';
 import Countdown from '../common/Countdown';
 import CircleOffsetImg from '../common/CircleOffsetImg';
 import LinkBox from './LinkBox';
-import { TIMINGS, TimingsType } from '../../data/locationData';
+import { TIMINGS, LINKS, TimingsType, LinksType } from '../../data/locationData';
 import { useEffect, useState } from 'react';
 import { convertTimesToUserTZ } from '../../utils/tz-conversion-utils';
 
 
 const HomePage = () => {
     const [timings, setTimings] = useState<TimingsType>({ ...TIMINGS });
+    // const [links, setLinks] = useState<LinksType>({ ...LINKS });
+
 
     useEffect(() => {
         const newTimings = convertTimesToUserTZ(timings);
@@ -26,8 +28,26 @@ const HomePage = () => {
                 />
                 <p className="subheading">{'Sunday 19 June 2022 (11:15AM AEST)'}</p>
                 <Countdown targetDateTime={TIMINGS.ceremonyStart}/>
-                <p className="zoom-link">{`Ceremony Zoom Link (${timings.ceremonyStart}): ${'tbc'}`}</p>
-                <p className="zoom-link">{`Toasts Zoom Link (${timings.zoomToastStart}): ${'tbc'}`}</p>
+                
+                <div className="zoom-link">
+                  <p>
+                    {`Ceremony (${timings.ceremonyStart})`}
+                    <a href={LINKS.zoomCeremonyLink}>
+                      {`Attend Zoom Ceremony`}
+                    </a>
+                    {`pw: ${LINKS.zoomCeremonyPass}`}
+                  </p>
+                </div>
+
+                <div className="zoom-link">
+                  <p>
+                    {`Toasts (${timings.zoomToastStart})`}
+                    <a href={LINKS.zoomToastsLink}>
+                      {`Attend Zoom Toasts`}
+                    </a>
+                    {`pw: ${LINKS.zoomToastsPass}`}
+                  </p>
+                </div>
 
             </section>
 
@@ -52,6 +72,7 @@ const HomePage = () => {
     );
 };
 
+
 const StyledMain = styled.main`
   text-align: center;
 
@@ -70,7 +91,25 @@ const StyledMain = styled.main`
 
     .zoom-link {
       color: var(--color-accent-1);
+      display: flex;
+      justify-content: center;
       margin-top: calc(-1 * var(--space-2));
+      
+      a {
+        background-color: var(--color-primary);
+        padding: var(--space-1) var(--space-2);
+        margin-inline: var(--space-1);
+        font-style: italic;
+        font-size: var(--heading-4);
+        background: var(--color-contrast);
+        border-radius: 8px;
+        cursor: pointer;
+      }
+
+      a:hover {
+        color: var(--color-contrast);
+        background-color: var(--color-primary);
+      }
     }
 
     section > p {
